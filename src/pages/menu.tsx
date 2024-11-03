@@ -9,7 +9,7 @@ const Menu = () => {
         <header>
           <a style={{ marginLeft: "15px", }}><b>Tel. (67) 3322 - 9911</b></a>
           <a style={{ marginRight: "15px" }}>
-            <b>Suporte</b>
+            <strong>Suporte</strong>
           </a>
         </header>
         <main>

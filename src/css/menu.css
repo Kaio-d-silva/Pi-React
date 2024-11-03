@@ -22,17 +22,26 @@ main{
     background-color: #ffffff;
     margin: 0 10%;
     border-radius: 20px;
+    
+
 }
 
 button{
 
-    height: 110px;
-    width: 210px;
+    height: 100px;
+    width: 200px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     border: #ffffff 1px;
+    font-size: 20px;
     /* box-shadow: -2px 2px 5px black; */
     /* padding: 25% 40%; */
+}
+
+button:hover{
+    background-color: #d8d7d7;
+    color: #ffffff;
+    
 }
 
 footer{
@@ -75,7 +84,8 @@ footer{
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 20px;
-    font-size: 25px;
+    
+    /* font-size: 25px; */
 }
 
 
