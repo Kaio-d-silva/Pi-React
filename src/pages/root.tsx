@@ -1,10 +1,13 @@
 import { Outlet } from "react-router-dom";
+import MiniDrawer from "./menu_funcionarios";
 
 const Root = () => {
   return (
     <>
-      <h1>Página Root</h1>
-      <Outlet />
+    <MiniDrawer>
+    <Outlet />
+    </MiniDrawer>
+      
     </>
   );
 };

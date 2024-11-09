@@ -6,13 +6,13 @@ const Menu = () => {
   return (
     <>
       <div style={{backgroundColor: "#71cd97"}}>
-        <header>
+        <header className='headerMenuPaciente'>
           <a style={{ marginLeft: "15px", }}><b>Tel. (67) 3322 - 9911</b></a>
           <a style={{ marginRight: "15px" }}>
             <strong>Suporte</strong>
           </a>
         </header>
-        <main>
+        <main className='mainMenuPaciente'>
           <div className="InformacoesDoUsuario">
             <p style={{ marginLeft: "40px" }}><strong>Olá</strong></p>
             <p style={{ marginRight: "40px", marginLeft: "auto" }}>Carlos Almeida</p>
