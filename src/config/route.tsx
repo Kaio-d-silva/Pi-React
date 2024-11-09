@@ -7,6 +7,7 @@ import {
 import Menu from "../pages/menu";
 import Root from "../pages/root";
 import Login from "../pages/login";
+import Cadastro from "../pages/cadastro";
 import MenuFuncionarios from "../pages/menu_funcionarios"
 import path from "path";
 
@@ -19,6 +20,10 @@ const routes = [
   {
     path: "menuFuncionarios",
     element: <MenuFuncionarios/>
+  },
+  {
+    path: "cadastro",
+    element: <Cadastro/>
   }
 ]
 

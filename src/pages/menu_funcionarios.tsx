@@ -23,6 +23,7 @@ import { Icon } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { link } from 'fs';
 import { Link } from 'react-router-dom';
+import HouseIcon from '@mui/icons-material/House';
 
 
 const drawerWidth = 240;
@@ -127,7 +128,8 @@ export default function MiniDrawer(props: Props) {
   };
   
   const itens = [
-    { text: 'home', icon: <AddIcon/>, router: '/login' },
+    { text: 'home', icon: <HouseIcon/>, router: '/login' },
+    { text: 'cadastro', icon: <AddIcon/>, router: '/cadastro' },
   ]
 
   return (
