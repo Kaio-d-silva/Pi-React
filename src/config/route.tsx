@@ -8,6 +8,7 @@ import Menu from "../pages/menu";
 import Root from "../pages/root";
 import Login from "../pages/login";
 import Cadastro from "../pages/cadastro";
+import CadastroTeste from "../pages/cadastroTeste";
 import MenuFuncionarios from "../pages/menu_funcionarios"
 import path from "path";
 
@@ -23,7 +24,7 @@ const routes = [
   },
   {
     path: "cadastro",
-    element: <Cadastro/>
+    element: <CadastroTeste/>
   }
 ]
 

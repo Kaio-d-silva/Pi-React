@@ -1,0 +1,14 @@
+.linhaPaciente, .linhaTelefone, .linhaCPF{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.dadosPaciente{
+    margin: 0 40px 40px 40px;
+
+}
+
+.formulario{
+    border: solid 1px;
+    margin: 40px  
+}
