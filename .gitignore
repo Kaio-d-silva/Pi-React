@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+/src/css/cadastroTeste_antigo.css
+
+/src/pages/teste.tsx

@@ -1,0 +1,66 @@
+.Mainstyle{
+    height: 120vh;
+    background-color: rgb(243, 243, 243);
+    padding: 1.5em;
+    width: 100%;
+    
+}
+.containerCadastro {
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 0.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.informacoesPaciente{
+    display:  grid;
+    grid-template-columns:  repeat(2,1fr);
+    gap: 1rem;
+}
+.endereco{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.endPrimeiraLinha, 
+.endSegundaLinha{
+    display: flex;
+    gap: 1rem;
+
+}
+.areaCadastroPaciente, 
+.areaEndereco{
+    background-color: rgb(255, 255, 255);
+    border: 0.5px solid rgb(199, 199, 199);
+    border-radius: 0.5rem;
+    padding: 1em;
+    font-size: 13px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* height: 100%; */
+    
+}
+
+.areaCadastroPaciente{
+    height: 50%;
+}
+
+.areaEndereco{
+    height: 40%;
+}
+
+.LabelCadastroPaciente {
+    margin-bottom: 0.3em; /* Espaço entre o label e o input */
+
+}
+
+.InputCadastroPaciente {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
