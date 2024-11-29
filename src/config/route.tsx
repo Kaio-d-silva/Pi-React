@@ -8,9 +8,11 @@ import Menu from "../pages/menuPaciente";
 import Root from "../pages/root";
 import Login from "../pages/login";
 import Cadastro from "../pages/cadastro";
-import CadastroTeste from "../pages/cadastroPaciente";
+import CadastroPaciente from "../pages/cadastroPaciente";
+import CadastroProfissional from "../pages/cadastroProfissional";
 import MenuFuncionarios from "../pages/menuFuncionarios"
 import path from "path";
+import { emitKeypressEvents } from "readline";
 
 
 const routes = [
@@ -24,7 +26,11 @@ const routes = [
   },
   {
     path: "cadastro",
-    element: <CadastroTeste/>
+    element: <CadastroPaciente/>
+  },
+  {
+    path: "cadastroProfissional",
+    element: <CadastroProfissional/>
   }
 ]
 

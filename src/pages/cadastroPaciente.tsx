@@ -1,6 +1,6 @@
 import '../css/cadastroPaciente.css'
 
-const CadastroTeste = () => {
+const CadastroPaciente = () => {
     return (
         <>
             <main className='Mainstyle'>
@@ -67,4 +67,4 @@ const CadastroTeste = () => {
     )
 }
 
-export default CadastroTeste
+export default CadastroPaciente

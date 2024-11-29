@@ -1,0 +1,51 @@
+.MainStyleCadastroProfissional{
+    height: 120vh;
+    background-color: rgb(243, 243, 243);
+    padding: 1.5em;
+    width: 100%;
+    
+}
+.containerCadastroProfissional {
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 0.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.informacoesProfissional{
+    display:  grid;
+    grid-template-columns:  repeat(2,1fr);
+    gap: 1rem;
+}
+
+.areaCadastroProfissional{
+    background-color: rgb(255, 255, 255);
+    border: 0.5px solid rgb(199, 199, 199);
+    border-radius: 0.5rem;
+    padding: 1em;
+    font-size: 11px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* height: 100%; */
+    
+}
+
+.areaCadastroProfissional{
+    height: 45%;
+}
+
+
+.LabelCadastroProfissional {
+    margin-bottom: 0.3em; /* Espaço entre o label e o input */
+
+}
+
+.InputCadastroProfissional {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
