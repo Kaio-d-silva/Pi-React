@@ -4,12 +4,12 @@ import {
   createBrowserRouter,
   Route,
 } from "react-router-dom";
-import Menu from "../pages/menu";
+import Menu from "../pages/menuPaciente";
 import Root from "../pages/root";
 import Login from "../pages/login";
 import Cadastro from "../pages/cadastro";
 import CadastroTeste from "../pages/cadastroPaciente";
-import MenuFuncionarios from "../pages/menu_funcionarios"
+import MenuFuncionarios from "../pages/menuFuncionarios"
 import path from "path";
 
 
