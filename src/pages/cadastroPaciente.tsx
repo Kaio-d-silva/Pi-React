@@ -6,7 +6,7 @@ const CadastroPaciente = () => {
             <main className='Mainstyle'>
                 <div className="containerCadastro">
                     <div className='areaCadastroPaciente'>
-                    <div className='TituloLocal'>
+                    <div className='TituloLocalCadastroPaciente'>
                         <h1>Dados Paciente</h1>
                         {/* <div className="border-b">
                             <ul>

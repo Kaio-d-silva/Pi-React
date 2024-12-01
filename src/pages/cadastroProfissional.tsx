@@ -1,10 +1,10 @@
 import '../css/cadastroProfissional.css'
 
-const CadastroProfissional = () => {
+const CadastroProfissionals = () => {
     return (
         <>
-            <main className='MainStyleCadastroFuncionario'>
-                <div className="containerCadastroFuncionario">
+            <main className='MainStyleCadastroProfissional'>
+                <div className="containerCadastroProfissional">
                     <div className='areaCadastroProfissional'>
                         <div className='TituloLocal'>
                             <h1>Dados Profissional</h1>
@@ -21,15 +21,15 @@ const CadastroProfissional = () => {
                                 <input className='InputCadastroProfissional' type="text" id="nome" />
                             </div>
                             <div>
-                                <label className='LabelCadastroProfissional' htmlFor="numeroRegistro">Registro</label>
-                                <input className='InputCadastroProfissional' type="number" id="numeroRegistro" />
+                                <label className='LabelCadastroProfissional' htmlFor="telefone">Telefone</label>
+                                <input className='InputCadastroProfissional' type="number" id="telefone" />
                             </div>
                             <div>
                                 <label className='LabelCadastroProfissional' htmlFor="tipoRegistro">Tipo Registro</label>
                                 <input className='InputCadastroProfissional' type="text" id="tipoRegistro" />
                             </div>
                             <div>
-                                <label className='LabelCadastroProfissional' htmlFor="telefone">Telefone</label>
+                                <label className='LabelCadastroProfissional' htmlFor="telefone">Registro</label>
                                 <input className='InputCadastroProfissional' type="tel" id="telefone" />
                             </div>
                             {/* <div>
@@ -48,4 +48,4 @@ const CadastroProfissional = () => {
     )
 }
 
-export default CadastroProfissional
+export default CadastroProfissionals

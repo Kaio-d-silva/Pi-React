@@ -10,6 +10,7 @@ import Login from "../pages/login";
 import Cadastro from "../pages/cadastro";
 import CadastroPaciente from "../pages/cadastroPaciente";
 import CadastroProfissional from "../pages/cadastroProfissional";
+
 import MenuFuncionarios from "../pages/menuFuncionarios"
 import path from "path";
 import { emitKeypressEvents } from "readline";
@@ -25,7 +26,7 @@ const routes = [
     element: <MenuFuncionarios/>
   },
   {
-    path: "cadastro",
+    path: "cadastroPaciente",
     element: <CadastroPaciente/>
   },
   {
