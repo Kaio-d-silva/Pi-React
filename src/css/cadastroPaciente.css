@@ -3,29 +3,37 @@
     background-color: rgb(243, 243, 243);
     padding: 1.5em;
     width: 100%;
+    font-weight: 500;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
+    color: rgb(102, 102, 102);
     
 }
 .containerCadastro {
     background-color: white;
-    padding: 1.5em;
+    padding: 24px;
     border-radius: 0.5rem;
-    height: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.informacoesPaciente, .endereco{
+    font-size: 13px;
+    gap: 1rem;
 }
 
 .informacoesPaciente{
     display:  grid;
     grid-template-columns:  repeat(2,1fr);
-    gap: 1rem;
+    
+    
 }
 .endereco{
     display: grid;
     /* flex-direction: column; */
     grid-template-columns:  repeat(4,1fr);
-    gap: 1rem;
 }
 
 /* .endPrimeiraLinha, 
@@ -50,16 +58,19 @@
     padding: 1em;
     font-size: 11px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 24px;
     /* height: 100%; */
     
 }
 
 .areaCadastroPaciente{
-    height: 45%;
+    height: 350px;
+    
 }
 
 .areaEndereco{
-    height: 40%;
+    height: 300px;
+    margin-top: 50px;
 }
 
 .LabelCadastroPaciente {
