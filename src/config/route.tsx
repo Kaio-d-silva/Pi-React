@@ -7,13 +7,13 @@ import {
 import Menu from "../pages/menuPaciente";
 import Root from "../pages/root";
 import Login from "../pages/login";
-import Cadastro from "../pages/cadastro";
 import CadastroPaciente from "../pages/cadastroPaciente";
 import CadastroProfissional from "../pages/cadastroProfissional";
-
 import MenuFuncionarios from "../pages/menuFuncionarios"
-import path from "path";
-import { emitKeypressEvents } from "readline";
+import Agenda from "../pages/agenda"
+
+// import path from "path";
+// import { emitKeypressEvents } from "readline";
 
 
 const routes = [
@@ -32,6 +32,10 @@ const routes = [
   {
     path: "cadastroProfissional",
     element: <CadastroProfissional/>
+  },
+  {
+    path: "agenda",
+    element: <Agenda/>
   }
 ]
 
