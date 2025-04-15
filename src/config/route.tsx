@@ -10,7 +10,7 @@ import Login from "../pages/login";
 import CadastroPaciente from "../pages/cadastroPaciente";
 import CadastroProfissional from "../pages/cadastroProfissional";
 import MenuFuncionarios from "../pages/menuFuncionarios"
-import Agenda from "../pages/agenda"
+import Formulario from "../pages/formulario";
 
 // import path from "path";
 // import { emitKeypressEvents } from "readline";
@@ -33,16 +33,17 @@ const routes = [
     path: "cadastroProfissional",
     element: <CadastroProfissional/>
   },
-  {
-    path: "agenda",
-    element: <Agenda/>
-  }
+  // {
+  //   path: "formulario",
+  //   element: <Formulario/>
+  // }
 ]
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/login" element={<Login />} />
+      <Route path="/formulario" element={<Formulario />} />
       <Route path="/" element={<Root/>}>
         {routes.map((route, index) => 
           <Route path={route.path} element={route.element} />
