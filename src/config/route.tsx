@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import Menu from "../pages/menuPaciente";
 import Root from "../pages/root";
-import Login from "../pages/login";
+import Login from "../pages/Login";
 import CadastroPaciente from "../pages/cadastroPaciente";
 import CadastroProfissional from "../pages/cadastroProfissional";
 import MenuFuncionarios from "../pages/menuFuncionarios"

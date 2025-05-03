@@ -25,3 +25,4 @@ yarn-error.log*
 /src/css/cadastroTeste_antigo.css
 
 /src/pages/teste.tsx
+/src/temp/login_teste
