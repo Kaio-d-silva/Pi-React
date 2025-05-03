@@ -47,6 +47,12 @@ const htmlFormulario = () => {
                                     <input type="number" id="total-uf" name="total_uf" placeholder="Volume em ml" required />
                                 </div>
                             </div>
+                            <div className="form-group teste">
+                                <label htmlFor="TPM">T.P.M</label>
+                                <input type="time" id="TPM" name="TPM" required />
+
+
+                            </div>
                             <div className="form-group">
                                 <label htmlFor="liquid-aspect">Aspecto do Líquido Drenado:</label>
                                 <select id="liquid-aspect" name="liquid_aspect" required>
@@ -75,9 +81,9 @@ const htmlFormulario = () => {
                             <div className="form-group">
                                 <label>Pressão Arterial (mmHg):</label>
                                 <div className="form-row bp-group">
-                                    <input type="number" id="bp-systolic" name="bp_systolic" min="0" placeholder="Sistólica" aria-label="Pressão Sistólica" required />
+                                    <input type="number" id="bp-systolic" name="bp_systolic" min="0" placeholder="Sistólica (Ex: 120)" aria-label="Pressão Sistólica" required />
                                     <span>/</span>
-                                    <input type="number" id="bp-diastolic" name="bp_diastolic" min="0" placeholder="Diastólica" aria-label="Pressão Diastólica" required />
+                                    <input type="number" id="bp-diastolic" name="bp_diastolic" min="0" placeholder="Diastólica (Ex: 80)" aria-label="Pressão Diastólica" required />
                                 </div>
                             </div>
                             <div className="form-group">
