@@ -17,10 +17,10 @@ import Formulario from "../pages/formulario";
 
 
 const routes = [
-  {
-    path: "menu",
-    element: <Menu />
-  },
+  // {
+  //   path: "menu",
+  //   element: <Menu />
+  // },
   {
     path: "menuFuncionarios",
     element: <MenuFuncionarios/>

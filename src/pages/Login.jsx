@@ -1,8 +1,15 @@
-import "../css/login.css";
+import "../assets/css/login.css";
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
+
+    const navigate = useNavigate();
+    const login = () =>{
+        navigate("/menu");
+    }
     return (
-        <main>
+        <main className="login-page">
             <div className="login-container">
                 <div className="login-image">
                 </div>
@@ -15,7 +22,9 @@ const Login = () => {
                         <div className="input-group">
                             <input type="password" id="password" name="password" placeholder="Senha" required />
                         </div>
-                        <button type="submit">ENTRAR</button>
+                        <button 
+                        type="button"
+                        onClick={login}>ENTRAR</button>
                         <a href="#" className="forgot-link">Esqueceu usuário ou senha?</a>
                         <a href="#" className="signup-link">CADASTRAR-SE</a>
                     </form>

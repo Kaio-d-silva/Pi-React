@@ -1,4 +1,4 @@
-import '../css/cadastroProfissional.css'
+import '../assets/css/cadastroProfissional.css'
 
 const CadastroProfissionals = () => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
-import '../css/menu.css'
-import '../img/fundoBotoes.png'
+import '../assets/css/menu.css'
+import '../assets/img/fundoBotoes.png'
 
 const Menu = () => {
   return (

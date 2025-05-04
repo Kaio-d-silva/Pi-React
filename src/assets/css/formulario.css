@@ -5,9 +5,6 @@
     padding: 0;
 } */
 
-.teste{
-    margin-top: 10px;
-}
 
 .form-container {
     font-family: 'Nunito Sans', sans-serif;
@@ -26,7 +23,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-header {
+.form-header {
     text-align: center;
     margin-bottom: 35px;
     border-bottom: 1px solid #e0e0e0;
@@ -39,20 +36,20 @@ header {
     opacity: 0.8; /* Logo sutil */
 }
 
-h1 {
+.title {
     color: #2c3e50; /* Azul escuro */
     font-weight: 700;
     margin-bottom: 8px;
     font-size: 1.8em;
 }
 
-header p {
+.form-header p {
     color: #555;
     font-size: 1.1em;
 }
 
 /* Estilo dos Fieldsets e Legendas */
-fieldset {
+.form-fieldset {
     border: none; /* Remove borda padrão */
     margin-bottom: 30px;
     padding: 25px;
@@ -61,7 +58,7 @@ fieldset {
     border: 1px solid #e9ecef;
 }
 
-legend {
+.form-fieldset-legend {
     font-size: 1.3em;
     font-weight: 600;
     color: #0077cc; /* Azul primário */
@@ -87,7 +84,7 @@ legend {
 }
 
 /* Estilo dos Labels */
-label {
+.dialysis-form label {
     display: block;
     margin-bottom: 8px;
     color: #495057; /* Cinza escuro */
@@ -96,32 +93,28 @@ label {
 }
 
 /* Estilo dos Inputs, Select, Textarea */
-input[type="text"],
-input[type="date"],
-input[type="time"],
-input[type="number"],
-select,
-textarea {
+.inputform,
+.dialysis-form select,
+.dialysis-form textarea {
     width: 94%;
     padding: 12px 15px;
-    border: 1px solid #ced4da; /* Cinza claro */
+    border: 1px solid #ced4da; 
     border-radius: 6px;
     font-size: 1em;
     font-family: inherit;
     background-color: #fff;
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-
-input:focus,
-select:focus,
-textarea:focus {
+.dialysis-form input:focus,
+.dialysis-form select:focus,
+.dialysis-form textarea:focus {
     border-color: #80bdff; /* Azul claro no foco */
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra suave azul */
 }
 
-input::placeholder,
-textarea::placeholder {
+.dialysis-form input::placeholder,
+.dialysis-form textarea::placeholder {
     color: #adb5bd; /* Cinza mais claro para placeholder */
     opacity: 1;
 }
@@ -201,10 +194,10 @@ textarea::placeholder {
     .container {
         padding: 20px;
     }
-    h1 {
+    .title {
         font-size: 1.5em;
     }
-    legend {
+    .form-fieldset-legend {
         font-size: 1.15em;
     }
     .form-row {

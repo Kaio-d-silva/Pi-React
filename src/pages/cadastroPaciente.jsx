@@ -1,4 +1,4 @@
-import '../css/cadastroPaciente.css'
+import '../assets/css/cadastroPaciente.css'
 
 const CadastroPaciente = () => {
     return (
