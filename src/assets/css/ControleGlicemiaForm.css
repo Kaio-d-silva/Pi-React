@@ -1,0 +1,206 @@
+/* Reset básico e fonte global (mantido do exemplo original) */
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+.form-container {
+    font-family: 'Nunito Sans', sans-serif; /* Certifique-se de ter esta fonte importada ou use uma alternativa */
+    background-color: #f0f4f8; /* Azul acinzentado muito claro */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh; /* Para ocupar a tela toda caso o conteúdo seja pequeno */
+}
+
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+h1 {
+    color: #2c3e50; /* Azul escuro */
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1.8em;
+}
+
+header p {
+    color: #555;
+    font-size: 1.1em;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+legend {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #0077cc; /* Azul primário */
+    margin-bottom: 20px;
+    padding: 0 10px;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Se precisar de campos lado a lado, pode usar .form-row como no exemplo original */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #495057; /* Cinza escuro */
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select,
+textarea {
+    width: 100%; /* Ajustado para 100% para preencher o container do form-group */
+    padding: 12px 15px;
+    border: 1px solid #ced4da; /* Cinza claro */
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: inherit;
+    background-color: #fff;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-sizing: border-box; /* Importante para padding não afetar a largura total */
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #80bdff; /* Azul claro no foco */
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra suave azul */
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #adb5bd; /* Cinza mais claro para placeholder */
+    opacity: 1;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-submit {
+    background-color: #0077cc; /* Azul primário */
+    color: white;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 25px; /* Botão mais arredondado */
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit:hover {
+    background-color: #005fa3; /* Azul mais escuro no hover */
+    /* transform: translateY(-2px); */ /* Efeito de elevação opcional */
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+    background-color: #004c8a;
+}
+
+.message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    /* display: none;  -- Oculto/Exibido via lógica React */
+}
+
+.message.success {
+    background-color: #d4edda; /* Verde claro */
+    color: #155724; /* Verde escuro */
+    border: 1px solid #c3e6cb;
+    /* display: block; -- Oculto/Exibido via lógica React */
+}
+
+.message.error {
+    background-color: #f8d7da; /* Vermelho claro */
+    color: #721c24; /* Vermelho escuro */
+    border: 1px solid #f5c6cb;
+    /* display: block; -- Oculto/Exibido via lógica React */
+}
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 25px; /* Ajuste de padding para telas menores */
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    legend {
+        font-size: 1.15em;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .form-row .form-group {
+        margin-bottom: 20px;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    input[type="number"],
+    select,
+    textarea {
+        font-size: 0.95em; /* Leve redução da fonte dos inputs em telas menores */
+    }
+    .btn-submit {
+        padding: 10px 25px;
+        font-size: 1em;
+    }
+}

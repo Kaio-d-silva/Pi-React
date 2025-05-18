@@ -6,7 +6,7 @@ const Login = () => {
 
     const navigate = useNavigate();
     const login = () =>{
-        navigate("/menu");
+        navigate("/");
     }
     return (
         <main className="login-page">
@@ -25,8 +25,8 @@ const Login = () => {
                         <button 
                         type="button"
                         onClick={login}>ENTRAR</button>
-                        <a href="#" className="forgot-link">Esqueceu usuário ou senha?</a>
-                        <a href="#" className="signup-link">CADASTRAR-SE</a>
+                        <a href="/" className="forgot-link">Esqueceu usuário ou senha?</a>
+                        <a href="/" className="signup-link">CADASTRAR-SE</a>
                     </form>
                 </div>
             </div>
