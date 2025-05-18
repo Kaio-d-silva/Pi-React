@@ -2,15 +2,18 @@ import React from "react";
 import FormularioDialise from "../views/ControleDialise"
 import ControleGlicemiaForm from "../views/ControleGlicemia"
 
+import "../assets/css/ContainerFormularios.css"
+
 const ContainerFormularios: React.FC = () => {
     const [activeTab, setActiveTab] = React.useState<'dialise' | 'glicemia'>('dialise');
     return (
         <>
-        <div>
-            <button onClick={() => setActiveTab('dialise')}>
+        <div className="form-container-controler">
+        <div className="container-controler">
+            <button className="form-type" onClick={() => setActiveTab('dialise')}>
                 Dialise
             </button>
-            <button onClick={() => setActiveTab('glicemia')}>
+            <button className="form-type" onClick={() => setActiveTab('glicemia')}>
                 Glicemia
             </button>
             <div>
@@ -21,6 +24,7 @@ const ContainerFormularios: React.FC = () => {
                     <ControleGlicemiaForm/>
                 )}
             </div>
+        </div>
         </div>
         </>
     );

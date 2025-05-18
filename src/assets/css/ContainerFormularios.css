@@ -1,0 +1,38 @@
+.form-container-controler{
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #d2e9ff; /* Azul acinzentado muito claro */
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.container-controler {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+
+}
+
+.form-type{
+    border : none;
+    border-radius: 25px 25px 0 0 ;
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-bottom: none;
+    background-color: #ffffff;
+    font-size: 1.1em;
+    padding: 25px 40px;
+    margin-right: 4px;
+    width: 150px;
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); */
+    box-shadow: 
+    0 -4px 15px rgba(0, 0, 0, 0.08),
+    4px 0 15px rgba(0, 0, 0, 0.08),
+    -4px 0 15px rgba(0, 0, 0, 0.08);
+
+    
+}
