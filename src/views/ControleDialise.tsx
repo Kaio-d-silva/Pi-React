@@ -1,7 +1,7 @@
 import "../assets/css/formulario.css"
 // import logo from "../img/logo-clinica.jpg"
 
-const logo = "/img/logo-clinica.jpg";
+const logo = "/img/logo.jpg";
 
 
 
