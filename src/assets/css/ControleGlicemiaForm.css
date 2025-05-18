@@ -1,20 +1,17 @@
-/* Reset básico e fonte global */
+/* Reset básico e fonte global (mantido do exemplo original) */
 /* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 } */
 
-.teste{
-    margin-top: 10px;
-}
-
 .form-container {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Nunito Sans', sans-serif; /* Certifique-se de ter esta fonte importada ou use uma alternativa */
     background-color: #f0f4f8; /* Azul acinzentado muito claro */
     color: #333;
     line-height: 1.6;
     padding: 20px;
+    min-height: 100vh; /* Para ocupar a tela toda caso o conteúdo seja pequeno */
 }
 
 .container {
@@ -34,9 +31,9 @@ header {
 }
 
 .logo {
-    max-width: 150px; /* Ajuste conforme necessário */
+    max-width: 150px;
     margin-bottom: 15px;
-    opacity: 0.8; /* Logo sutil */
+    opacity: 0.8;
 }
 
 h1 {
@@ -51,12 +48,11 @@ header p {
     font-size: 1.1em;
 }
 
-/* Estilo dos Fieldsets e Legendas */
 fieldset {
-    border: none; /* Remove borda padrão */
+    border: none;
     margin-bottom: 30px;
     padding: 25px;
-    background-color: #f8f9fa; /* Fundo levemente diferente */
+    background-color: #f8f9fa;
     border-radius: 8px;
     border: 1px solid #e9ecef;
 }
@@ -66,27 +62,26 @@ legend {
     font-weight: 600;
     color: #0077cc; /* Azul primário */
     margin-bottom: 20px;
-    padding: 0 10px; /* Evita que a linha do fieldset (se tivesse) passe por cima */
-    background-color: #ffffff; /* Fundo da legenda igual ao container */
+    padding: 0 10px;
+    background-color: #ffffff;
     border-radius: 4px;
 }
 
-/* Grupos e Linhas de Formulário */
 .form-group {
     margin-bottom: 20px;
 }
 
+/* Se precisar de campos lado a lado, pode usar .form-row como no exemplo original */
 .form-row {
     display: flex;
-    gap: 20px; /* Espaçamento entre itens na linha */
+    gap: 20px;
 }
 
 .form-row .form-group {
-    flex: 1; /* Ocupa espaço igual */
-    margin-bottom: 0; /* Remove margem inferior se já tem gap */
+    flex: 1;
+    margin-bottom: 0;
 }
 
-/* Estilo dos Labels */
 label {
     display: block;
     margin-bottom: 8px;
@@ -95,14 +90,13 @@ label {
     font-size: 0.95em;
 }
 
-/* Estilo dos Inputs, Select, Textarea */
 input[type="text"],
 input[type="date"],
 input[type="time"],
 input[type="number"],
 select,
 textarea {
-    width: 94%;
+    width: 100%; /* Ajustado para 100% para preencher o container do form-group */
     padding: 12px 15px;
     border: 1px solid #ced4da; /* Cinza claro */
     border-radius: 6px;
@@ -110,6 +104,7 @@ textarea {
     font-family: inherit;
     background-color: #fff;
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-sizing: border-box; /* Importante para padding não afetar a largura total */
 }
 
 input:focus,
@@ -126,23 +121,6 @@ textarea::placeholder {
     opacity: 1;
 }
 
-/* Estilo específico para grupo de Pressão Arterial */
-.bp-group {
-    align-items: center; /* Alinha inputs e barra verticalmente */
-}
-
-.bp-group span {
-    font-size: 1.5em;
-    color: #ced4da;
-    padding: 0 5px;
-    align-self: center; /* Garante alinhamento */
-    margin-top: 5px; /* Ajuste fino vertical */
-}
-.bp-group input {
-    text-align: center;
-}
-
-/* Botão de Envio */
 .form-actions {
     text-align: center;
     margin-top: 30px;
@@ -163,43 +141,42 @@ textarea::placeholder {
 
 .btn-submit:hover {
     background-color: #005fa3; /* Azul mais escuro no hover */
-    /*transform: translateY(-2px);  Leve elevação */
+    /* transform: translateY(-2px); */ /* Efeito de elevação opcional */
 }
 
 .btn-submit:active {
-    transform: translateY(0); /* Retorna ao clicar */
+    transform: translateY(0);
     background-color: #004c8a;
 }
 
-/* Mensagens de Feedback */
 .message {
     margin-top: 20px;
     padding: 15px;
     border-radius: 6px;
     font-weight: 600;
     text-align: center;
-    display: none; /* Oculto por padrão */
+    /* display: none;  -- Oculto/Exibido via lógica React */
 }
 
 .message.success {
     background-color: #d4edda; /* Verde claro */
     color: #155724; /* Verde escuro */
     border: 1px solid #c3e6cb;
-    display: block;
+    /* display: block; -- Oculto/Exibido via lógica React */
 }
 
 .message.error {
     background-color: #f8d7da; /* Vermelho claro */
     color: #721c24; /* Vermelho escuro */
     border: 1px solid #f5c6cb;
-    display: block;
+    /* display: block; -- Oculto/Exibido via lógica React */
 }
 
 
 /* Responsividade */
 @media (max-width: 600px) {
     .container {
-        padding: 20px;
+        padding: 20px 25px; /* Ajuste de padding para telas menores */
     }
     h1 {
         font-size: 1.5em;
@@ -208,13 +185,22 @@ textarea::placeholder {
         font-size: 1.15em;
     }
     .form-row {
-        flex-direction: column; /* Empilha itens em telas pequenas */
-        gap: 0; /* Remove gap vertical se empilhado (form-group já tem margin) */
+        flex-direction: column;
+        gap: 0;
     }
     .form-row .form-group {
-        margin-bottom: 20px; /* Adiciona margem inferior de volta */
+        margin-bottom: 20px;
     }
-    .bp-group input {
-        /* Garante que caibam mesmo em coluna */
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    input[type="number"],
+    select,
+    textarea {
+        font-size: 0.95em; /* Leve redução da fonte dos inputs em telas menores */
+    }
+    .btn-submit {
+        padding: 10px 25px;
+        font-size: 1em;
     }
 }

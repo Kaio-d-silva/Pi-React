@@ -1,7 +1,11 @@
-import "../css/formulario.css"
-import logo from "../img/logo-clinica.jpg"
+import "../assets/css/formulario.css"
+// import logo from "../img/logo-clinica.jpg"
 
-const htmlFormulario = () => {
+const logo = "/img/logo-clinica.jpg";
+
+
+
+const FormularioDialise = () => {
     return (
         <>
             <div className="form-container">
@@ -113,4 +117,4 @@ const htmlFormulario = () => {
     )
 }
 
-export default htmlFormulario
+export default FormularioDialise

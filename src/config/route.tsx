@@ -4,23 +4,19 @@ import {
   createBrowserRouter,
   Route,
 } from "react-router-dom";
-import Menu from "../pages/menuPaciente";
-import Root from "../pages/root";
-import Login from "../pages/login";
-import CadastroPaciente from "../pages/cadastroPaciente";
-import CadastroProfissional from "../pages/cadastroProfissional";
-import MenuFuncionarios from "../pages/menuFuncionarios"
-import Formulario from "../pages/formulario";
-
+import Root from "../components/root";
+import Login from "../views/Login";
+import CadastroPaciente from "../views/CadastroPaciente";
+import CadastroProfissional from "../views/CadastroProfissional";
+import MenuFuncionarios from "../views/MenuFuncionarios"
+import Formulario from "../views/ControleDialise";
+import ControleGlicemiaForm from "../views/ControleGlicemia";
+import ContainerFormularios from "../components/ContainerFormularios";
 // import path from "path";
 // import { emitKeypressEvents } from "readline";
 
 
 const routes = [
-  {
-    path: "menu",
-    element: <Menu />
-  },
   {
     path: "menuFuncionarios",
     element: <MenuFuncionarios/>
@@ -44,6 +40,8 @@ const router = createBrowserRouter(
     <>
       <Route path="/login" element={<Login />} />
       <Route path="/formulario" element={<Formulario />} />
+      <Route path="/glicemia" element={<ControleGlicemiaForm />} />
+      <Route path="/teste" element={<ContainerFormularios />} />
       <Route path="/" element={<Root/>}>
         {routes.map((route, index) => 
           <Route path={route.path} element={route.element} />

@@ -1,0 +1,213 @@
+/* Reset básico e fonte global */
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+
+.form-container {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #f0f4f8; /* Azul acinzentado muito claro */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+.logo {
+    max-width: 150px; /* Ajuste conforme necessário */
+    margin-bottom: 15px;
+    opacity: 0.8; /* Logo sutil */
+}
+
+.title {
+    color: #2c3e50; /* Azul escuro */
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 1.8em;
+}
+
+.form-header p {
+    color: #555;
+    font-size: 1.1em;
+}
+
+/* Estilo dos Fieldsets e Legendas */
+.form-fieldset {
+    border: none; /* Remove borda padrão */
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #f8f9fa; /* Fundo levemente diferente */
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.form-fieldset-legend {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #0077cc; /* Azul primário */
+    margin-bottom: 20px;
+    padding: 0 10px; /* Evita que a linha do fieldset (se tivesse) passe por cima */
+    background-color: #ffffff; /* Fundo da legenda igual ao container */
+    border-radius: 4px;
+}
+
+/* Grupos e Linhas de Formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px; /* Espaçamento entre itens na linha */
+}
+
+.form-row .form-group {
+    flex: 1; /* Ocupa espaço igual */
+    margin-bottom: 0; /* Remove margem inferior se já tem gap */
+}
+
+/* Estilo dos Labels */
+.dialysis-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #495057; /* Cinza escuro */
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+/* Estilo dos Inputs, Select, Textarea */
+.inputform,
+.dialysis-form select,
+.dialysis-form textarea {
+    width: 94%;
+    padding: 12px 15px;
+    border: 1px solid #ced4da; 
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: inherit;
+    background-color: #fff;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.dialysis-form input:focus,
+.dialysis-form select:focus,
+.dialysis-form textarea:focus {
+    border-color: #80bdff; /* Azul claro no foco */
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra suave azul */
+}
+
+.dialysis-form input::placeholder,
+.dialysis-form textarea::placeholder {
+    color: #adb5bd; /* Cinza mais claro para placeholder */
+    opacity: 1;
+}
+
+/* Estilo específico para grupo de Pressão Arterial */
+.bp-group {
+    align-items: center; /* Alinha inputs e barra verticalmente */
+}
+
+.bp-group span {
+    font-size: 1.5em;
+    color: #ced4da;
+    padding: 0 5px;
+    align-self: center; /* Garante alinhamento */
+    margin-top: 5px; /* Ajuste fino vertical */
+}
+.bp-group input {
+    text-align: center;
+}
+
+/* Botão de Envio */
+.form-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-submit {
+    background-color: #0077cc; /* Azul primário */
+    color: white;
+    padding: 12px 35px;
+    border: none;
+    border-radius: 25px; /* Botão mais arredondado */
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit:hover {
+    background-color: #005fa3; /* Azul mais escuro no hover */
+    /*transform: translateY(-2px);  Leve elevação */
+}
+
+.btn-submit:active {
+    transform: translateY(0); /* Retorna ao clicar */
+    background-color: #004c8a;
+}
+
+/* Mensagens de Feedback */
+.message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    display: none; /* Oculto por padrão */
+}
+
+.message.success {
+    background-color: #d4edda; /* Verde claro */
+    color: #155724; /* Verde escuro */
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.message.error {
+    background-color: #f8d7da; /* Vermelho claro */
+    color: #721c24; /* Vermelho escuro */
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    .title {
+        font-size: 1.5em;
+    }
+    .form-fieldset-legend {
+        font-size: 1.15em;
+    }
+    .form-row {
+        flex-direction: column; /* Empilha itens em telas pequenas */
+        gap: 0; /* Remove gap vertical se empilhado (form-group já tem margin) */
+    }
+    .form-row .form-group {
+        margin-bottom: 20px; /* Adiciona margem inferior de volta */
+    }
+    .bp-group input {
+        /* Garante que caibam mesmo em coluna */
+    }
+}
