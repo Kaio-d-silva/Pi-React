@@ -1,7 +1,7 @@
 import "../assets/css/formulario.css"
-// import logo from "../img/logo-clinica.jpg"
 
-const logo = "/img/logo.jpg";
+import logo from '../assets/img/logo.jpg';
+
 
 
 
@@ -11,7 +11,7 @@ const FormularioDialise = () => {
             <div className="form-container">
                 <div className="container">
                     <header>
-                        <img src={logo} alt="Logo Clínica (Exemplo)" className="logo" />
+                        <img src={logo} alt="Logo Clínica" className="logo" />
                         <h1>Controle de Diálise Peritoneal Automatizada</h1>
                         <p>Registre os dados da sua sessão de diálise.</p>
                     </header>

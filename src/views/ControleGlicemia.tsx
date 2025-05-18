@@ -1,8 +1,7 @@
-// import logo from "../img/logo-clinica.jpg";
+import logo from "../assets/img/logo.jpg";
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import '../assets/css/ControleGlicemiaForm.css'; // Importa o CSS
 
-const logo = "/img/logo-clinica.jpg";
 
 interface GlicemiaFormData {
   data: string;
