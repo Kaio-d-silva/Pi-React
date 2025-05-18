@@ -1,17 +1,10 @@
-/* Reset básico e fonte global (mantido do exemplo original) */
-/* * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-} */
-
+/* Estilo geral do formulário */
 .form-container {
-    font-family: 'Nunito Sans', sans-serif; /* Certifique-se de ter esta fonte importada ou use uma alternativa */
+    font-family: 'Nunito Sans', sans-serif;
     background-color: #f0f4f8; /* Azul acinzentado muito claro */
     color: #333;
     line-height: 1.6;
     padding: 20px;
-    min-height: 100vh; /* Para ocupar a tela toda caso o conteúdo seja pequeno */
 }
 
 .container {
@@ -23,7 +16,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-header {
+.form-header {
     text-align: center;
     margin-bottom: 35px;
     border-bottom: 1px solid #e0e0e0;
@@ -31,58 +24,60 @@ header {
 }
 
 .logo {
-    max-width: 150px;
+    max-width: 150px; /* Ajuste conforme necessário */
     margin-bottom: 15px;
-    opacity: 0.8;
+    opacity: 0.8; /* Logo sutil */
 }
 
-h1 {
+.title-form {
     color: #2c3e50; /* Azul escuro */
     font-weight: 700;
     margin-bottom: 8px;
     font-size: 1.8em;
 }
 
-header p {
+.form-header p {
     color: #555;
     font-size: 1.1em;
 }
 
-fieldset {
-    border: none;
+/* Estilo dos Fieldsets e Legendas */
+.form-fieldset {
+    border: none; /* Remove borda padrão */
     margin-bottom: 30px;
     padding: 25px;
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; /* Fundo levemente diferente */
     border-radius: 8px;
     border: 1px solid #e9ecef;
 }
 
-legend {
+.form-fieldset-legend {
     font-size: 1.3em;
     font-weight: 600;
     color: #0077cc; /* Azul primário */
     margin-bottom: 20px;
-    padding: 0 10px;
-    background-color: #ffffff;
+    padding: 0 10px; /* Evita que a linha do fieldset (se tivesse) passe por cima */
+    background-color: #ffffff; /* Fundo da legenda igual ao container */
     border-radius: 4px;
 }
 
+/* Grupos e Linhas de Formulário */
 .form-group {
     margin-bottom: 20px;
 }
 
-/* Se precisar de campos lado a lado, pode usar .form-row como no exemplo original */
 .form-row {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Espaçamento entre itens na linha */
 }
 
 .form-row .form-group {
-    flex: 1;
-    margin-bottom: 0;
+    flex: 1; /* Ocupa espaço igual */
+    margin-bottom: 0; /* Remove margem inferior se já tem gap */
 }
 
-label {
+/* Estilo dos Labels */
+.form label {
     display: block;
     margin-bottom: 8px;
     color: #495057; /* Cinza escuro */
@@ -90,37 +85,51 @@ label {
     font-size: 0.95em;
 }
 
-input[type="text"],
-input[type="date"],
-input[type="time"],
-input[type="number"],
-select,
-textarea {
-    width: 100%; /* Ajustado para 100% para preencher o container do form-group */
+/* Estilo dos Inputs, Select, Textarea */
+.input-form,
+.form select,
+.form textarea {
+    width: 100%;
     padding: 12px 15px;
-    border: 1px solid #ced4da; /* Cinza claro */
+    border: 1px solid #ced4da; 
     border-radius: 6px;
     font-size: 1em;
     font-family: inherit;
     background-color: #fff;
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    box-sizing: border-box; /* Importante para padding não afetar a largura total */
+    box-sizing: border-box;
 }
-
-input:focus,
-select:focus,
-textarea:focus {
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
     border-color: #80bdff; /* Azul claro no foco */
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Sombra suave azul */
 }
 
-input::placeholder,
-textarea::placeholder {
+.form input::placeholder,
+.form textarea::placeholder {
     color: #adb5bd; /* Cinza mais claro para placeholder */
     opacity: 1;
 }
 
+/* Estilo específico para grupo de Pressão Arterial */
+.bp-group {
+    align-items: center; /* Alinha inputs e barra verticalmente */
+}
+
+.bp-group span {
+    font-size: 1.5em;
+    color: #ced4da;
+    padding: 0 5px;
+    align-self: center; /* Garante alinhamento */
+    margin-top: 5px; /* Ajuste fino vertical */
+}
+.bp-group input {
+    text-align: center;
+}
+
+/* Botão de Envio */
 .form-actions {
     text-align: center;
     margin-top: 30px;
@@ -141,66 +150,58 @@ textarea::placeholder {
 
 .btn-submit:hover {
     background-color: #005fa3; /* Azul mais escuro no hover */
-    /* transform: translateY(-2px); */ /* Efeito de elevação opcional */
+    /*transform: translateY(-2px);  Leve elevação */
 }
 
 .btn-submit:active {
-    transform: translateY(0);
+    transform: translateY(0); /* Retorna ao clicar */
     background-color: #004c8a;
 }
 
+/* Mensagens de Feedback */
 .message {
     margin-top: 20px;
     padding: 15px;
     border-radius: 6px;
     font-weight: 600;
     text-align: center;
-    /* display: none;  -- Oculto/Exibido via lógica React */
+    display: none; /* Oculto por padrão */
 }
 
 .message.success {
     background-color: #d4edda; /* Verde claro */
     color: #155724; /* Verde escuro */
     border: 1px solid #c3e6cb;
-    /* display: block; -- Oculto/Exibido via lógica React */
+    display: block;
 }
 
 .message.error {
     background-color: #f8d7da; /* Vermelho claro */
     color: #721c24; /* Vermelho escuro */
     border: 1px solid #f5c6cb;
-    /* display: block; -- Oculto/Exibido via lógica React */
+    display: block;
 }
 
 
 /* Responsividade */
 @media (max-width: 600px) {
     .container {
-        padding: 20px 25px; /* Ajuste de padding para telas menores */
+        padding: 20px;
     }
-    h1 {
+    .title {
         font-size: 1.5em;
     }
-    legend {
+    .form-fieldset-legend {
         font-size: 1.15em;
     }
     .form-row {
-        flex-direction: column;
-        gap: 0;
+        flex-direction: column; /* Empilha itens em telas pequenas */
+        gap: 0; /* Remove gap vertical se empilhado (form-group já tem margin) */
     }
     .form-row .form-group {
-        margin-bottom: 20px;
+        margin-bottom: 20px; /* Adiciona margem inferior de volta */
     }
-    input[type="text"],
-    input[type="date"],
-    input[type="time"],
-    input[type="number"],
-    select,
-    textarea {
-        font-size: 0.95em; /* Leve redução da fonte dos inputs em telas menores */
-    }
-    .btn-submit {
-        padding: 10px 25px;
-        font-size: 1em;
+    .bp-group input {
+        /* Garante que caibam mesmo em coluna */
     }
 }

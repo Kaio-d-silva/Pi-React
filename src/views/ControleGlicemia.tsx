@@ -1,6 +1,6 @@
 import logo from "../assets/img/logo.jpg";
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import '../assets/css/ControleGlicemiaForm.css'; // Importa o CSS
+import '../assets/css/PadraoFormulario.css'; // Importa o CSS
 
 
 interface GlicemiaFormData {
@@ -60,18 +60,19 @@ const ControleGlicemiaForm: React.FC = () => {
   return (
     <div className="form-container">
       <div className="container">
-        <header>
+        <header className="form-header">
           <img src={logo} alt="Logo Clínica" className="logo" /> 
-          <h1>CONTROLE DIÁRIO DE GLICEMIA</h1>
+          <h1 className="title-form">CONTROLE DIÁRIO DE GLICEMIA</h1>
           <p>Registre seus níveis de glicemia diariamente.</p>
         </header>
 
-        <form id="glicemia-form" onSubmit={handleSubmit}>
-          <fieldset>
-            <legend>Informações da Data</legend>
+        <form className="form" id="glicemia-form" onSubmit={handleSubmit}>
+          <fieldset className="form-fieldset">
+            <legend className="form-fieldset-legend">Informações da Data</legend>
             <div className="form-group">
               <label htmlFor="data">DATA:</label>
               <input
+                className= "input-form"
                 type="date"
                 id="data"
                 name="data"
@@ -82,11 +83,12 @@ const ControleGlicemiaForm: React.FC = () => {
             </div>
           </fieldset>
 
-          <fieldset>
-            <legend>Medições de Glicemia (mg/dL)</legend>
+          <fieldset className="form-fieldset">
+            <legend className="form-fieldset-legend">Medições de Glicemia (mg/dL)</legend>
             <div className="form-group">
               <label htmlFor="glicemiaJejum">GLICEMIA JEJUM:</label>
               <input
+                className= "input-form"
                 type="number"
                 id="glicemiaJejum"
                 name="glicemiaJejum"
@@ -100,6 +102,7 @@ const ControleGlicemiaForm: React.FC = () => {
             <div className="form-group">
               <label htmlFor="glicemiaAntesAlmoco">GLICEMIA ANTES DO ALMOÇO:</label>
               <input
+                className= "input-form"
                 type="number"
                 id="glicemiaAntesAlmoco"
                 name="glicemiaAntesAlmoco"
@@ -113,6 +116,7 @@ const ControleGlicemiaForm: React.FC = () => {
             <div className="form-group">
               <label htmlFor="glicemia2hAposAlmoco">GLICEMIA 2H APÓS O ALMOÇO:</label>
               <input
+                className= "input-form"
                 type="number"
                 id="glicemia2hAposAlmoco"
                 name="glicemia2hAposAlmoco"
@@ -126,6 +130,7 @@ const ControleGlicemiaForm: React.FC = () => {
             <div className="form-group">
               <label htmlFor="glicemiaAntesJantar">GLICEMIA ANTES DO JANTAR:</label>
               <input
+                className= "input-form"
                 type="number"
                 id="glicemiaAntesJantar"
                 name="glicemiaAntesJantar"
@@ -139,6 +144,7 @@ const ControleGlicemiaForm: React.FC = () => {
             <div className="form-group">
               <label htmlFor="glicemia2hAposJantar">GLICEMIA 2H APÓS O JANTAR:</label>
               <input
+                className= "input-form"
                 type="number"
                 id="glicemia2hAposJantar"
                 name="glicemia2hAposJantar"
@@ -150,8 +156,8 @@ const ControleGlicemiaForm: React.FC = () => {
             </div>
           </fieldset>
 
-          <fieldset>
-            <legend>Observações</legend>
+          <fieldset className="form-fieldset">
+            <legend className="form-fieldset-legend">Observações</legend>
             <div className="form-group">
               <label htmlFor="observacoes">Anotações Adicionais:</label>
               <textarea
