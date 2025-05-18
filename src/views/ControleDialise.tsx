@@ -1,4 +1,4 @@
-import "../assets/css/formulario.css"
+import "../assets/css/ControleDialise.css"
 
 import logo from '../assets/img/logo.jpg';
 
