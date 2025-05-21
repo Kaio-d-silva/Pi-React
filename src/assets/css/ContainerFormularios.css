@@ -1,14 +1,15 @@
 .form-container-controler{
     font-family: 'Nunito Sans', sans-serif;
-    background-color: #d2e9ff; /* Azul acinzentado muito claro */
+    background-color: #f0f4f8; /* Azul acinzentado muito claro */
     color: #333;
     line-height: 1.6;
+    padding: 30px;
 }
 
 
 .container-controler {
-    max-width: 700px;
-    margin: 30px auto;
+    max-width: 800px;
+    margin: 0px auto;
     padding: 20px 20px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -22,17 +23,21 @@
     border-top: 1px solid #e0e0e0;
     border-right: 1px solid #e0e0e0;
     border-left: 1px solid #e0e0e0;
-    border-bottom: none;
     background-color: #ffffff;
     font-size: 1.1em;
     padding: 25px 40px;
     margin-right: 4px;
     width: 150px;
+    /* margin-bottom: -1px; */
     /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); */
-    box-shadow: 
+    /* box-shadow: 
     0 -4px 15px rgba(0, 0, 0, 0.08),
     4px 0 15px rgba(0, 0, 0, 0.08),
-    -4px 0 15px rgba(0, 0, 0, 0.08);
+    -4px 0 15px rgba(0, 0, 0, 0.08); */
 
-    
+}
+
+.active {
+    margin-bottom: -1px;
+    color: purple;
 }

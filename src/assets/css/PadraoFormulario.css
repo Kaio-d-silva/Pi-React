@@ -12,6 +12,8 @@
     background-color: #ffffff;
     padding: 30px 40px;
     border-radius: 0 25px 25px 25px;
+    /* border-top: none; */
+    
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
