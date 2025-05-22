@@ -12,7 +12,6 @@ import MenuFuncionarios from "../views/MenuFuncionarios"
 import Formulario from "../views/ControleDialise";
 import ControleGlicemiaForm from "../views/ControleGlicemia";
 import ContainerFormularios from "../components/ContainerFormularios";
-import Pacientes from "../components/Teste";
 // import path from "path";
 // import { emitKeypressEvents } from "readline";
 
@@ -43,7 +42,6 @@ const router = createBrowserRouter(
       <Route path="/formulario" element={<Formulario />} />
       <Route path="/glicemia" element={<ControleGlicemiaForm />} />
       <Route path="/teste" element={<ContainerFormularios />} />
-      <Route path="/teste1" element={<Pacientes />} />
       <Route path="/" element={<Root/>}>
         {routes.map((route, index) => 
           <Route path={route.path} element={route.element} />
