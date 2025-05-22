@@ -10,6 +10,7 @@ const ContainerFormularios: React.FC = () => {
         <>
         <div className="form-container-controler">
         <div className="container-controler">
+            <div className="tabs-navigation">
             <button 
             className={`form-type ${activeTab === 'dialise' ? 'active' : ''}`} 
             onClick={() => setActiveTab('dialise')}>
@@ -20,7 +21,8 @@ const ContainerFormularios: React.FC = () => {
             onClick={() => setActiveTab('glicemia')}>
                 Glicemia
             </button>
-            <div>
+            </div>
+            <div className="form-content-card">
                 {activeTab === 'dialise' && (
                     <FormularioDialise/>
                 )}
