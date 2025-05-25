@@ -69,12 +69,12 @@
 }
 
 /* Pequenos ajustes nos inputs e labels (opcional, mas melhora consistência) */
-.InputCadastroPaciente, 
-.LabelCadastroPaciente {
+.inputCadastroPaciente, 
+.labelCadastroPaciente {
     box-sizing: border-box; /* Para que padding e border não aumentem a largura total */
 }
 
-.InputCadastroPaciente {
+.inputCadastroPaciente {
     width: 100%; /* Garante que o input ocupe toda a largura do seu container div */
 }
 
@@ -98,7 +98,7 @@
 
 /* CadastroPofissional, tenho que organizar isso aqui */
 
-.Mainstyle{
+.mainstyle{
     /* height: 120vh; */
     background-color: rgb(243, 243, 243);
     padding: 1.5em;

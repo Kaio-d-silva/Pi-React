@@ -9,7 +9,7 @@ const CadastroPaciente: React.FC = () => {
     
     return (
         <>
-            <main className={styles.Mainstyle}>
+            <main className={styles.mainstyle}>
                 <div className={styles.containerCadastro}>
                     {/* Navegação das Abas */}
                     <div className={styles.tabNavigation}>

@@ -3,7 +3,7 @@ import styles from '../assets/css/FormularioCadastro.module.css'
 const CadastroProfissionals = () => {
     return (
         <>
-            <main className={styles.Mainstyle}>
+            <main className={styles.mainstyle}>
                 <div className={styles.containerCadastro}>
                     <div className={styles.areaCadastroPaciente}>
                         <div className={styles.TituloLocalCadastroPaciente}>

@@ -1,11 +1,11 @@
 /* Reset básico e configurações gerais */
-.login-container * {
+.loginContainer * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.login-page {
+.loginPage {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #eef1f5; /* Um cinza bem claro para o fundo */
     display: flex;
@@ -16,7 +16,7 @@
 }
 
 /* Container principal do login */
-.login-container {
+.loginContainer {
     display: flex;
     width: 850px; /* Largura total */
     max-width: 95%; /* Responsividade */
@@ -27,7 +27,7 @@
 }
 
 /* Coluna da Imagem */
-.login-image {
+.loginImage {
     flex-basis: 45%; /* Largura da coluna da imagem */
     background-image: url('../img/login.png'); /* --- SUBSTITUA PELO NOME DA SUA IMAGEM --- */
     background-size: cover; /* Cobrir todo o espaço */
@@ -36,7 +36,7 @@
 }
 
 /* Coluna do Formulário */
-.login-form {
+.loginForm {
     flex-basis: 55%; /* Largura da coluna do formulário */
     padding: 50px 40px;
     display: flex;
@@ -44,7 +44,7 @@
     justify-content: center; /* Centraliza verticalmente o conteúdo */
 }
 
-.login-form h1 {
+.loginForm h1 {
     text-align: center;
     color: #334e68; /* Um cinza-azulado escuro */
     margin-bottom: 30px;
@@ -52,11 +52,11 @@
     font-weight: 600;
 }
 
-.input-group {
+.inputGroup {
     margin-bottom: 20px;
 }
 
-.input-group input {
+.inputGroup input {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid #ced4da; /* Borda cinza claro */
@@ -66,17 +66,17 @@
     transition: border-color 0.2s ease;
 }
 
-.input-group input::placeholder {
+.inputGroup input::placeholder {
     color: #adb5bd; /* Cor do placeholder */
 }
 
-.input-group input:focus {
+.inputGroup input:focus {
     outline: none;
     border-color: #20c997; /* Verde-azulado no foco (cor da imagem) */
     box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.15); /* Sombra suave no foco */
 }
 
-.login-container button[type="button"] {
+.loginContainer button[type="button"] {
     width: 100%;
     height: 50px;
     padding: 12px;
@@ -91,11 +91,11 @@
     margin-top: 10px;
 }
 
-.login-container button[type="button"]:hover {
+.loginContainer button[type="button"]:hover {
     background-color: #1aa07d; /* Tom mais escuro no hover */
 }
 
-.forgot-link {
+.forgotLink {
     display: block; /* Para ocupar a linha toda */
     text-align: center;
     margin-top: 20px;
@@ -104,11 +104,11 @@
     text-decoration: none;
 }
 
-.forgot-link:hover {
+.forgotLink:hover {
     text-decoration: underline;
 }
 
-.signup-link {
+.signupLink {
     display: block;
     text-align: center;
     margin-top: 35px; /* Mais espaço acima */
@@ -118,31 +118,31 @@
     font-weight: 500;
 }
 
-.signup-link:hover {
+.signupLink:hover {
     text-decoration: underline;
 }
 
 /* Media Query para telas menores (Responsividade) */
 @media (max-width: 768px) {
-    .login-container {
+    .loginContainer {
         flex-direction: column; /* Empilha as colunas */
         width: 90%;
         max-width: 400px; /* Limita a largura em telas pequenas */
     }
 
-    .login-image {
+    .loginImage {
         /* Oculta a imagem ou define uma altura fixa */
         /* display: none; */
          height: 200px; /* Altura fixa se quiser mostrar um pedaço */
          flex-basis: auto; /* Reseta a base flex */
     }
 
-    .login-form {
+    .loginForm {
         flex-basis: auto; /* Reseta a base flex */
         padding: 40px 30px;
     }
 
-    .login-form h1 {
+    .loginForm h1 {
         font-size: 1.6em;
         margin-bottom: 25px;
     }
