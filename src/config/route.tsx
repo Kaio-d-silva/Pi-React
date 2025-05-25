@@ -8,7 +8,7 @@ import Root from "../components/root";
 import Login from "../views/Login";
 import CadastroPaciente from "../views/CadastroPaciente";
 import CadastroProfissional from "../views/CadastroProfissional";
-import MenuFuncionarios from "../views/MenuFuncionarios"
+import MenuFuncionarios from "../components/MenuFuncionarios"
 import Formulario from "../views/ControleDialise";
 import ControleGlicemiaForm from "../views/ControleGlicemia";
 import ContainerFormularios from "../components/ContainerFormularios";
