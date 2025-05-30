@@ -1,0 +1,127 @@
+/* src/assets/css/PadraoFormularioSimples.css */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f0f2f5; /* Page background, similar to common UI backdrops */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  .organiza-geral {
+    /* Wrapper if needed, body styling often suffices for centering */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form-resultado-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    padding: 24px;
+    width: 480px; /* Adjusted width to better fit content like in image */
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .form-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    /* No bottom border here, first section title will have top border */
+  }
+  
+  .form-cabecalho h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1c1e21; /* Dark text color */
+    margin: 0;
+  }
+  
+  .botao-compartilhar {
+    background-color: #e4e6eb; /* Light gray background for button */
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #4b4f56; /* Darker gray text for button */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .botao-compartilhar:hover {
+    background-color: #d8dbdf;
+  }
+  
+  .secao-formulario {
+    margin-bottom: 8px; /* Reduced space between sections */
+  }
+  
+  .secao-titulo {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1c1e21; /* Consistent dark text color */
+    margin: 0 0 8px 0;
+    padding-top: 16px;
+    border-top: 1px solid #e9ebee; /* Separator line above title */
+  }
+  
+  
+  
+  .item-dado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; /* Padding for each item */
+    border-bottom: 1px solid #e9ebee; /* Lighter separator for items */
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .secao-formulario .item-dado:last-child {
+    border-bottom: none;
+  }
+  
+  .item-dado-label {
+    color: #606770; /* Gray for labels, less prominent */
+    flex-shrink: 0;
+    margin-right: 16px; /* More space between label and value */
+  }
+  
+  .item-dado-valor-simples {
+    color: #1c1e21; /* Darker text for values */
+    font-weight: 400; /* Regular weight or 500 for slightly bolder */
+    text-align: right;
+  }
+  
+  .item-dado-valor-complexo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    gap: 8px;
+    color: #1c1e21;
+    font-weight: 400;
+    text-align: right;
+    flex-grow: 1; /* Allows this group to push to the right */
+  }
+  
+  
+  .barra-visual {
+    width: 50px;  /* Width of the blue bar itself */
+    height: 10px; /* Height of the blue bar */
+    background-color: #1877f2; /* Facebook blue, common for positive indicators */
+    border-radius: 3px;
+  }
+  
+  .item-dado-unidade {
+    color: #606770; /* Same as label color for units */
+    font-size: 13px;
+    margin-left: 2px; /* Small space before unit if it's right after the bar */
+  }
