@@ -160,3 +160,7 @@
     border-radius: 4px;
     width: 100%;
 }
+
+.areaHistorico{
+    min-height: 70vh;
+}

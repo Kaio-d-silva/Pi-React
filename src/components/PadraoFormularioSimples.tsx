@@ -1,6 +1,6 @@
 import React from 'react';
 // Importe o CSS SIMPLES (adjust path if your structure is different)
-import '../assets/css/PadraoFormularioSimples.css';
+import styles from '../assets/css/PadraoFormularioSimples.module.css';
 
 // Interface for complex value types (like the one with the bar)
 interface DataEntryValueObject {
@@ -61,23 +61,23 @@ const FormResultSimple: React.FC = () => {
     if (typeof value === 'object' && value !== null && 'text' in value) {
       const val = value as DataEntryValueObject;
       return (
-        <div className="item-dado-valor-complexo">
+        <div className={styles.itemDadoValorComplexo}>
           <span>{val.text}</span>
-          {val.bar && <div className="barra-visual"></div>}
-          {val.unit && <span className="item-dado-unidade">{val.unit}</span>}
+          {val.bar && <div className={styles.barraVisual}></div>}
+          {val.unit && <span className={styles.itemDadoUnidade}>{val.unit}</span>}
         </div>
       );
     }
-    return <span className="item-dado-valor-simples">{value}</span>;
+    return <span className={styles.itemDadoValorSimples}>{value}</span>;
   };
 
   // Helper function to render a section
   const renderSection = (title: string, data: DataEntry[]) => (
-    <div className="secao-formulario">
-      <h2 className="secao-titulo">{title}</h2>
+    <div className={styles.secaoFormulario}>
+      <h2 className={styles.secaoTitulo}>{title}</h2>
       {data.map((item, index) => (
-        <div className="item-dado" key={`${title.replace(/\s+/g, '-')}-${index}`}>
-          <span className="item-dado-label">{item.label}</span>
+        <div className={styles.itemDado} key={`${title.replace(/\s+/g, '-')}-${index}`}>
+          <span className={styles.itemDadoLabel}>{item.label}</span>
           {renderValue(item.value)}
         </div>
       ))}
@@ -85,18 +85,22 @@ const FormResultSimple: React.FC = () => {
   );
 
   return (
-    <div className="organiza-geral">
-      <div className="form-resultado-container">
-        <div className="form-cabecalho">
+    <div className={styles.organizaGeral}>
+      <div className={styles.formResultadoContainer}>
+        <div className={styles.formCabecalho}>
           <h1>Resultado do formulário</h1>
-          <button className="botao-compartilhar">Compartilhar</button>
+          {/* <button className={styles.botaoCompartilhar}>Compartilhar</button> */}
         </div>
-
-        {renderSection("Informações da Sessão", sessionInfo)}
-        {renderSection("Detalhes da Diálise", dialysisDetails)}
-        {renderSection("Medições do Paciente", patientMeasurements)}
-        {renderSection("Dados de Glicemía", glycemiaInfo)}
-
+        <div  className={styles.formularioConteudo}>
+        <div  className={styles.dados}>
+        <div className='ajuste'>{renderSection("Informações da Sessão", sessionInfo)}</div>
+        <div className='ajuste'>{renderSection("Medições do Paciente", patientMeasurements)}</div>
+        </div>
+        <div  className={styles.dados}>
+        <div className='ajuste'>{renderSection("Detalhes da Diálise", dialysisDetails)}</div>
+        <div className='ajuste'>{renderSection("Dados de Glicemía", glycemiaInfo)}</div>
+        </div>
+        </div>
       </div>
     </div>
   );
