@@ -45,14 +45,7 @@ const FormResultSimple: React.FC = () => {
     { label: 'DATA', value: '25/04/2024' },
     { label: 'Glicemia Jejum', value: 105 },
     { label: 'Glicemia Antes do Almoço', value: 140 },
-    {
-      label: 'Glicemia 2H Após o Almoço',
-      value: {
-        text: 180,
-        bar: true,
-        unit: 'mg/dL',
-      },
-    },
+    { label: 'Glicemia 2H Após o Almoço',value: 180},
     { label: 'Glicemia Antes do Jantar', value: 135 },
     { label: 'Glicemia 2H Após o Jantar', value: 160 },
   ];
@@ -93,12 +86,13 @@ const FormResultSimple: React.FC = () => {
         </div>
         <div  className={styles.formularioConteudo}>
         <div  className={styles.dados}>
-        <div className='ajuste'>{renderSection("Informações da Sessão", sessionInfo)}</div>
-        <div className='ajuste'>{renderSection("Medições do Paciente", patientMeasurements)}</div>
+        <div>{renderSection("Informações da Sessão", sessionInfo)}</div>
+        <div className={styles.ajuste}>{renderSection("Dados de Glicemía", glycemiaInfo)}</div>
         </div>
         <div  className={styles.dados}>
-        <div className='ajuste'>{renderSection("Detalhes da Diálise", dialysisDetails)}</div>
-        <div className='ajuste'>{renderSection("Dados de Glicemía", glycemiaInfo)}</div>
+        <div>{renderSection("Medições do Paciente", patientMeasurements)}</div>
+        <div className={styles.ajuste}>{renderSection("Detalhes da Diálise", dialysisDetails)}</div>
+        
         </div>
         </div>
       </div>

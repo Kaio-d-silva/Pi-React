@@ -6,6 +6,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    height: 90vh;
     
   }
 
@@ -148,4 +149,11 @@
 
  .dados{
   width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+ }
+
+ .ajuste{
+  margin-top: 70px;
  }

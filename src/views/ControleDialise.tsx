@@ -37,7 +37,7 @@ const FormularioDialise = () => {
 
                         <fieldset className={styles.formFieldset}>
                             <legend className={styles.formFieldsetLegend}>Detalhes da Diálise</legend>
-                            <div className="form-group">
+                            <div className={styles.formGroup}>
                                 <label htmlFor="solution-type">Solução Utilizada:</label>
                                 <input className={styles.inputForm} type="text" id="solution-type" name="solution_type" placeholder="Ex: Glicose 1.5%" required />
                             </div>

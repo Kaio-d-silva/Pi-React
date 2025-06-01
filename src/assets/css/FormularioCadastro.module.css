@@ -72,6 +72,7 @@
 .inputCadastroPaciente, 
 .labelCadastroPaciente {
     box-sizing: border-box; /* Para que padding e border não aumentem a largura total */
+    font-size: 16px; /* Tamanho da fonte dos inputs */
 }
 
 .inputCadastroPaciente {
