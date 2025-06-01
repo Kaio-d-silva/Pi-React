@@ -15,7 +15,7 @@ interface DataEntry {
   value: string | number | DataEntryValueObject;
 }
 
-const FormResultSimple: React.FC = () => {
+const DetalhesFormulario: React.FC = () => {
   // 1. Informação da Sessão
   const sessionInfo: DataEntry[] = [
     { label: 'Data da Sessão', value: '25/04/2024' }, // Kept from original
@@ -100,4 +100,4 @@ const FormResultSimple: React.FC = () => {
   );
 };
 
-export default FormResultSimple;
+export default DetalhesFormulario;

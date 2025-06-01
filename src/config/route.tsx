@@ -12,7 +12,7 @@ import MenuFuncionarios from "../components/MenuFuncionarios"
 import Formulario from "../views/ControleDialise";
 import ControleGlicemiaForm from "../views/ControleGlicemia";
 import ContainerFormularios from "../components/ContainerFormularios";
-import FormResultSimple from "../components/PadraoFormularioSimples";
+import DetalhesFormulario from "../components/DetalhesFormulario";
 // import path from "path";
 // import { emitKeypressEvents } from "readline";
 
@@ -32,7 +32,7 @@ const routes = [
   },
   {
     path: "/dados",
-    element: < FormResultSimple/>
+    element: < DetalhesFormulario/>
 
   }
   // {
