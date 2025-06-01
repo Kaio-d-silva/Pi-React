@@ -1,0 +1,159 @@
+  
+  
+  
+  .organizaGeral {
+    /* Wrapper if needed, body styling often suffices for centering */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    
+  }
+
+  .formResultadoContainer {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    width: 100%;
+    /* Adjusted width to better fit content like in image */
+    max-width: 60%;
+    box-sizing: border-box;
+  }
+
+  .formCabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    /* No bottom border here, first section title will have top border */
+  }
+
+  .formCabecalho h1 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #1c1e21;
+    /* Dark text color */
+    margin: 0;
+  }
+
+  .botaoCompartilhar {
+    background-color: #e4e6eb;
+    /* Light gray background for button */
+    border: 1px solid #ccd0d5;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #4b4f56;
+    /* Darker gray text for button */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .botaoCompartilhar:hover {
+    background-color: #d8dbdf;
+  }
+
+  .secaoFormulario {
+    margin-bottom: 8px;
+    /* Reduced space between sections */
+  }
+
+  .secaoTitulo {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1c1e21;
+    /* Consistent dark text color */
+    margin: 0 0 8px 0;
+    padding-top: 16px;
+    border-top: 1px solid #e9ebee;
+    /* Separator line above title */
+  }
+
+
+
+  .itemDado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    /* Padding for each item */
+    border-bottom: 1px solid #e9ebee;
+    /* Lighter separator for items */
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .itemDado span{
+    margin-top: 3px;
+  }
+
+  .secaoFormulario .itemDado:last-child {
+    border-bottom: none;
+  }
+
+  .itemDadoLabel {
+    color: #606770;
+    /* Gray for labels, less prominent */
+    flex-shrink: 0;
+    margin-right: 16px;
+    /* More space between label and value */
+  }
+
+  .itemDadoValorSimples {
+    color: #1c1e21;
+    /* Darker text for values */
+    font-weight: 400;
+    /* Regular weight or 500 for slightly bolder */
+    text-align: right;
+  }
+
+  .itemDadoValorComplexo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Align items to the right */
+    gap: 8px;
+    color: #1c1e21;
+    font-weight: 400;
+    text-align: right;
+    flex-grow: 1;
+    /* Allows this group to push to the right */
+  }
+
+
+  .barraVisual {
+    width: 50px;
+    /* Width of the blue bar itself */
+    height: 10px;
+    /* Height of the blue bar */
+    background-color: #1877f2;
+    /* Facebook blue, common for positive indicators */
+    border-radius: 3px;
+  }
+
+  .itemDadoUnidade {
+    color: #606770;
+    /* Same as label color for units */
+    font-size: 13px;
+    margin-left: 2px;
+    /* Small space before unit if it's right after the bar */
+  }
+
+ .formularioConteudo{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+ }
+
+ .dados{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+ }
+
+ .ajuste{
+  margin-top: 70px;
+ }

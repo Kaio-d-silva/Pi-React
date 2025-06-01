@@ -1,6 +1,6 @@
 import logo from "../assets/img/logo.jpg";
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import '../assets/css/PadraoFormulario.css'; // Importa o CSS
+import styles from '../assets/css/PadraoFormulario.module.css'; // Importa o CSS
 
 
 interface GlicemiaFormData {
@@ -58,21 +58,21 @@ const ControleGlicemiaForm: React.FC = () => {
   };
 
   return (
-    <div className="form-container">
-      <div className="container">
-        <header className="form-header">
-          <img src={logo} alt="Logo Clínica" className="logo" /> 
+    <div className={styles.formContainer}>
+      <div className={styles.container}>
+        <header className={styles.formHeader}>
+          <img src={logo} alt="Logo Clínica" className={styles.logo} /> 
           <h1 className="title-form">CONTROLE DIÁRIO DE GLICEMIA</h1>
           <p>Registre seus níveis de glicemia diariamente.</p>
         </header>
 
-        <form className="form" id="glicemia-form" onSubmit={handleSubmit}>
-          <fieldset className="form-fieldset">
-            <legend className="form-fieldset-legend">Informações da Data</legend>
-            <div className="form-group">
+        <form className={styles.form} id="glicemia-form" onSubmit={handleSubmit}>
+          <fieldset className={styles.formFieldset}>
+            <legend className={styles.formFieldsetLegend}>Informações da Data</legend>
+            <div className={styles.formGroup}>
               <label htmlFor="data">DATA:</label>
               <input
-                className= "input-form"
+                className= {styles.inputForm}
                 type="date"
                 id="data"
                 name="data"
@@ -83,12 +83,12 @@ const ControleGlicemiaForm: React.FC = () => {
             </div>
           </fieldset>
 
-          <fieldset className="form-fieldset">
-            <legend className="form-fieldset-legend">Medições de Glicemia (mg/dL)</legend>
-            <div className="form-group">
+          <fieldset className={styles.formFieldset}>
+            <legend className={styles.formFieldsetLegend}>Medições de Glicemia (mg/dL)</legend>
+            <div className={styles.formGroup}>
               <label htmlFor="glicemiaJejum">GLICEMIA JEJUM:</label>
               <input
-                className= "input-form"
+                className= {styles.inputForm}
                 type="number"
                 id="glicemiaJejum"
                 name="glicemiaJejum"
@@ -99,10 +99,10 @@ const ControleGlicemiaForm: React.FC = () => {
               />
             </div>
 
-            <div className="form-group">
+            <div className={styles.formGroup}>
               <label htmlFor="glicemiaAntesAlmoco">GLICEMIA ANTES DO ALMOÇO:</label>
               <input
-                className= "input-form"
+                className={styles.inputForm}
                 type="number"
                 id="glicemiaAntesAlmoco"
                 name="glicemiaAntesAlmoco"
@@ -113,10 +113,10 @@ const ControleGlicemiaForm: React.FC = () => {
               />
             </div>
 
-            <div className="form-group">
+            <div className={styles.formGroup}>
               <label htmlFor="glicemia2hAposAlmoco">GLICEMIA 2H APÓS O ALMOÇO:</label>
               <input
-                className= "input-form"
+                className= {styles.inputForm}
                 type="number"
                 id="glicemia2hAposAlmoco"
                 name="glicemia2hAposAlmoco"
@@ -127,10 +127,10 @@ const ControleGlicemiaForm: React.FC = () => {
               />
             </div>
 
-            <div className="form-group">
+            <div className={styles.formGroup}>
               <label htmlFor="glicemiaAntesJantar">GLICEMIA ANTES DO JANTAR:</label>
               <input
-                className= "input-form"
+                className= {styles.inputForm}
                 type="number"
                 id="glicemiaAntesJantar"
                 name="glicemiaAntesJantar"
@@ -144,7 +144,7 @@ const ControleGlicemiaForm: React.FC = () => {
             <div className="form-group">
               <label htmlFor="glicemia2hAposJantar">GLICEMIA 2H APÓS O JANTAR:</label>
               <input
-                className= "input-form"
+                className= {styles.inputForm}
                 type="number"
                 id="glicemia2hAposJantar"
                 name="glicemia2hAposJantar"
@@ -156,9 +156,9 @@ const ControleGlicemiaForm: React.FC = () => {
             </div>
           </fieldset>
 
-          <fieldset className="form-fieldset">
-            <legend className="form-fieldset-legend">Observações</legend>
-            <div className="form-group">
+          <fieldset className={styles.formFieldset}>
+            <legend className={styles.formFieldsetLegend}>Observações</legend>
+            <div className={styles.formGroup}>
               <label htmlFor="observacoes">Anotações Adicionais:</label>
               <textarea
                 id="observacoes"
@@ -171,8 +171,8 @@ const ControleGlicemiaForm: React.FC = () => {
             </div>
           </fieldset>
 
-          <div className="form-actions">
-            <button type="submit" className="btn-submit">Salvar Dados de Glicemia</button>
+          <div className={styles.formActions}>
+            <button type="submit" className={styles.btnSubmit}>Salvar Dados de Glicemia</button>
           </div>
 
           {formMessage && (

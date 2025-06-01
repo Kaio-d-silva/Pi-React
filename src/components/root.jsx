@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import MiniDrawer from "../views/MenuFuncionarios";
+import MiniDrawer from "./MenuFuncionarios";
 
 const Root = () => {
   return (

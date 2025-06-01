@@ -1,0 +1,52 @@
+.formContainerControler{
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #f0f4f8; /* Azul acinzentado muito claro */
+    color: #333;
+    line-height: 1.6;
+    padding: 30px;
+}
+
+
+.containerControler {
+    max-width: 800px;
+    margin: 0px auto;
+    padding: 20px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+
+}
+
+.formType{
+    border : none;
+    border-radius: 25px 25px 0 0 ;
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    font-size: 1.1em;
+    padding: 25px;
+    margin-right: 4px;
+    margin-left: 20px;
+    width: 150px;
+    z-index: 1;
+    background-color: #eeeeee;
+
+}
+
+.tabsNavigation{
+    display: flex;
+    align-items: center;
+
+}
+.formType.active {
+    background-color: #ffffff;
+    margin-bottom: -1px;
+    color:#0077cc;
+    z-index: 3;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px -1px 1px 0px, rgba(0, 0, 0, 0.05) 1px 0px 1px 0px, rgba(0, 0, 0, 0.05) -1px 0px 1px 0px;
+}
+
+.formContentCard{
+    z-index: 2;
+    border: none;
+}

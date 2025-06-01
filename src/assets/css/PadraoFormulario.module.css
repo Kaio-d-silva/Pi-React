@@ -1,22 +1,23 @@
 /* Estilo geral do formulário */
-.form-container {
+.formContainer {
     font-family: 'Nunito Sans', sans-serif;
-    background-color: #f0f4f8; /* Azul acinzentado muito claro */
+    background-color: #ffffff; /* Azul acinzentado muito claro */
     color: #333;
     line-height: 1.6;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .container {
-    max-width: 700px;
-    margin: 30px auto;
+    border: solid 1px #e0e0e0;
     background-color: #ffffff;
     padding: 30px 40px;
-    border-radius: 12px;
+    border-radius: 25px;
+    /* border-top: none; */
+    
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-.form-header {
+.formHeader {
     text-align: center;
     margin-bottom: 35px;
     border-bottom: 1px solid #e0e0e0;
@@ -29,20 +30,20 @@
     opacity: 0.8; /* Logo sutil */
 }
 
-.title-form {
+.titleForm {
     color: #2c3e50; /* Azul escuro */
     font-weight: 700;
     margin-bottom: 8px;
     font-size: 1.8em;
 }
 
-.form-header p {
+.formHeader p {
     color: #555;
     font-size: 1.1em;
 }
 
 /* Estilo dos Fieldsets e Legendas */
-.form-fieldset {
+.formFieldset {
     border: none; /* Remove borda padrão */
     margin-bottom: 30px;
     padding: 25px;
@@ -51,7 +52,7 @@
     border: 1px solid #e9ecef;
 }
 
-.form-fieldset-legend {
+.formFieldset-legend {
     font-size: 1.3em;
     font-weight: 600;
     color: #0077cc; /* Azul primário */
@@ -62,16 +63,16 @@
 }
 
 /* Grupos e Linhas de Formulário */
-.form-group {
+.formGroup {
     margin-bottom: 20px;
 }
 
-.form-row {
+.formRow {
     display: flex;
     gap: 20px; /* Espaçamento entre itens na linha */
 }
 
-.form-row .form-group {
+.formRow .formGroup {
     flex: 1; /* Ocupa espaço igual */
     margin-bottom: 0; /* Remove margem inferior se já tem gap */
 }
@@ -86,7 +87,7 @@
 }
 
 /* Estilo dos Inputs, Select, Textarea */
-.input-form,
+.inputForm,
 .form select,
 .form textarea {
     width: 100%;
@@ -114,28 +115,28 @@
 }
 
 /* Estilo específico para grupo de Pressão Arterial */
-.bp-group {
+.bpGroup {
     align-items: center; /* Alinha inputs e barra verticalmente */
 }
 
-.bp-group span {
+.bpGroup span {
     font-size: 1.5em;
     color: #ced4da;
     padding: 0 5px;
     align-self: center; /* Garante alinhamento */
     margin-top: 5px; /* Ajuste fino vertical */
 }
-.bp-group input {
+.bpGroup input {
     text-align: center;
 }
 
 /* Botão de Envio */
-.form-actions {
+.formActions {
     text-align: center;
     margin-top: 30px;
 }
 
-.btn-submit {
+.btnSubmit {
     background-color: #0077cc; /* Azul primário */
     color: white;
     padding: 12px 35px;
@@ -148,12 +149,12 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.btn-submit:hover {
+.btnSubmit:hover {
     background-color: #005fa3; /* Azul mais escuro no hover */
     /*transform: translateY(-2px);  Leve elevação */
 }
 
-.btn-submit:active {
+.btnSubmit:active {
     transform: translateY(0); /* Retorna ao clicar */
     background-color: #004c8a;
 }
@@ -191,17 +192,21 @@
     .title {
         font-size: 1.5em;
     }
-    .form-fieldset-legend {
+    .formFieldsetLegend {
         font-size: 1.15em;
     }
-    .form-row {
+    .formRow {
         flex-direction: column; /* Empilha itens em telas pequenas */
         gap: 0; /* Remove gap vertical se empilhado (form-group já tem margin) */
     }
-    .form-row .form-group {
+    .formRow .formGroup {
         margin-bottom: 20px; /* Adiciona margem inferior de volta */
     }
-    .bp-group input {
+    .bpGroup input {
         /* Garante que caibam mesmo em coluna */
     }
+}
+
+.teste{
+    margin-top: 20px;
 }

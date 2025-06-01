@@ -130,7 +130,7 @@ export default function MiniDrawer(props: Props) {
   const itens = [
     { text: 'home', icon: <HouseIcon/>, router: '/login' },
     { text: 'Pacientes', icon: <AddIcon/>, router: '/cadastroPaciente' },
-    { text: 'Profissionais', icon: <AddIcon/>, router: '/cadastroProfissional'}
+    // { text: 'Profissionais', icon: <AddIcon/>, router: '/cadastroProfissional'}
   ]
 
   return (
