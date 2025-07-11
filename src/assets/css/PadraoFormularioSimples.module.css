@@ -2,11 +2,10 @@
   
   
   .organizaGeral {
-    /* Wrapper if needed, body styling often suffices for centering */
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 90vh;
+    height: 100vh;
     
   }
 
@@ -17,7 +16,7 @@
     padding: 24px;
     width: 100%;
     /* Adjusted width to better fit content like in image */
-    max-width: 60%;
+    /* max-width: 60%; */
     box-sizing: border-box;
   }
 

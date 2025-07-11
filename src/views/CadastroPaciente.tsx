@@ -38,7 +38,7 @@ const CadastroPaciente: React.FC = () => {
                                     <div className={styles.informacoesPaciente}>
                                         <div>
                                             <label className={styles.labelCadastroPaciente} htmlFor="nome"><b>Nome </b></label>
-                                            <input className={styles.inputCadastroPaciente} type="text" id="nome"  defaultValue="Kaio Mendes"/>
+                                            <input className={styles.inputCadastroPaciente} type="text" id="nome" />
                                         </div>
                                         <div>
                                             <label className={styles.labelCadastroPaciente} htmlFor="data-nascimento"><b>Data de nascimento</b></label>
@@ -46,15 +46,15 @@ const CadastroPaciente: React.FC = () => {
                                         </div>
                                         <div>
                                             <label className={styles.labelCadastroPaciente} htmlFor="cpf"><b>CPF</b></label>
-                                            <input className={styles.inputCadastroPaciente} type="text" id="cpf" defaultValue="097.933.510-80"/> {/* CPF geralmente é texto para incluir . e - */}
+                                            <input className={styles.inputCadastroPaciente} type="text" id="cpf" />
                                         </div>
                                         <div>
                                             <label className={styles.labelCadastroPaciente} htmlFor="telefone"><b>Telefone</b></label>
-                                            <input className={styles.inputCadastroPaciente} type="tel" id="telefone" defaultValue="(67) 9 9234 - 2565"/>
+                                            <input className={styles.inputCadastroPaciente} type="tel" id="telefone"/>
                                         </div>
                                         <div>
                                             <label className={styles.labelCadastroPaciente} htmlFor="whatsapp"><b>WhatsApp</b></label> {/* Corrigido 'whatssap' */}
-                                            <input className={styles.inputCadastroPaciente} type="tel" id="whatsapp" defaultValue="(67) 9 9234 - 2565"/>
+                                            <input className={styles.inputCadastroPaciente} type="tel" id="whatsapp"/>
                                         </div>
                                         <div>
                                             <label className={styles.labelCadastroPaciente} htmlFor="status"><b>Status</b></label> {/* Campo CEP estava duplicado, assumi que era Status */}
