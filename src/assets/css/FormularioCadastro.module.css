@@ -165,3 +165,26 @@
 .areaHistorico{
     min-height: 70vh;
 }
+
+@media (max-width: 300px) {
+
+    /*
+     * Altera os grids de "Dados Paciente" e "Endereço" para terem apenas UMA coluna.
+     * Isso força cada campo a ocupar uma linha, empilhando-os verticalmente.
+    */
+    .informacoesPaciente,
+    .endereco {
+        grid-template-columns: 1fr; /* A regra mais importante! */
+    }
+
+    /* Opcional, mas recomendado para mobile: remover altura fixa */
+    .areaCadastroPaciente, 
+    .areaEndereco {
+        height: auto; /* Permite que o container cresça conforme o conteúdo */
+    }
+
+    /* Opcional: ajustar o espaço entre as áreas em telas menores */
+    .areaEndereco {
+        margin-top: 24px;
+    }
+}

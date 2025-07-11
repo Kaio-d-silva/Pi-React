@@ -18,10 +18,10 @@ import DetalhesFormulario from "../components/DetalhesFormulario";
 
 
 const routes = [
-  {
-    path: "cadastroPaciente",
-    element: <CadastroPaciente/>
-  },
+  // {
+  //   path: "cadastroPaciente",
+  //   element: <CadastroPaciente/>
+  // },
   {
     path: "cadastroProfissional",
     element: <CadastroProfissional/>
@@ -44,6 +44,7 @@ const router = createBrowserRouter(
       <Route path="/formulario" element={<Formulario />} />
       <Route path="/glicemia" element={<ControleGlicemiaForm />} />
       <Route path="/formularios" element={<ContainerFormularios />} />
+      <Route path="/cadastroPaciente" element={<CadastroPaciente />} />
       <Route path="/" element={<Root/>}>
         {routes.map((route, index) => 
           <Route path={route.path} element={route.element} />
