@@ -17,7 +17,7 @@ const Collapse: React.FC<CollapseProps> = ({ title, children }) => {
     
   return (
     <div className={styles.collapse}>
-      <div className={styles.collapseTitle} onClick={toggleCollapse}>
+      <div className={`${styles.collapseTitle} ${open ?  styles.collapseOpenTitle : styles.collapseClosedTitle }`} onClick={toggleCollapse}>
         {title}
         <span>{open ? "▲" : "▼"}</span>
       </div>
