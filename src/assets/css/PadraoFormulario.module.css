@@ -185,7 +185,7 @@
 
 
 /* Responsividade */
-@media (max-width: 600px) {
+@media (max-width: 360px) {
     .container {
         padding: 20px;
     }
@@ -202,11 +202,5 @@
     .formRow .formGroup {
         margin-bottom: 20px; /* Adiciona margem inferior de volta */
     }
-    .bpGroup input {
-        /* Garante que caibam mesmo em coluna */
-    }
 }
 
-.teste{
-    margin-top: 20px;
-}

@@ -1,7 +1,7 @@
 /* Estilos para a Aba de Histórico */
 .historicoContainer {
     padding: 20px;
-    background-color: #f8f9fa; /* Um fundo levemente diferente para a área de histórico */
+    background-color: #f8f9fa;
     border-radius: 0.3rem;
     border: 1px solid #e9ecef;
 }
@@ -10,7 +10,8 @@
     margin-top: 0;
     margin-bottom: 20px;
     color: #343a40;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Título com tamanho padrão para desktop */
+    text-align: center; /* Centraliza o título */
 }
 
 .historicoLista {
@@ -23,35 +24,68 @@
     background-color: #fff;
     padding: 15px;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    border-radius: 8px; /* Bordas um pouco mais arredondadas */
+    margin-bottom: 15px; /* Aumenta o espaço entre os itens */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06); /* Sombra um pouco mais suave */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha se necessário */
+}
+
+/* Div para agrupar as informações de Data e Tipo */
+.historicoInfo {
+    display: flex;
+    flex-direction: column;
 }
 
 .historicoData {
-    font-weight: 500;
-    color: #555;
+    font-weight: 600; /* Deixa a data com mais destaque */
+    color: #333;
+    font-size: 1em;
 }
 
 .historicoTipo {
-    color: #777;
+    color: #666;
     font-size: 0.9em;
+    margin-top: 4px; /* Adiciona um pequeno espaço entre a data e o tipo */
 }
 
 .btnVerDetalhes {
-    padding: 6px 12px;
+    padding: 8px 16px; /* Aumenta um pouco o botão */
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 0.85em;
-    transition: background-color 0.2s ease;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btnVerDetalhes:hover {
     background-color: #0056b3;
+    transform: scale(1.05); /* Efeito de zoom no hover */
+}
+
+@media (max-width: 360px) {
+    .historicoContainer {
+        padding: 15px; 
+    }
+
+    .historicoContainer h2 {
+        font-size: 1.3rem; 
+    }
+
+    .historicoItem {
+        flex-direction: column;   
+        align-items: flex-start; 
+
+    }
+    .btnVerDetalhes {
+        width: 100%;            
+        margin-top: 10px;        
+        padding: 8px;         
+        font-size: 0.75em;         
+    }
 }
