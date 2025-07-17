@@ -2,10 +2,10 @@
 .formDetailsContainer {
   display: grid;
   /* Cria colunas que se ajustam, com um tamanho mínimo de 320px */
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 24px; /* Espaçamento entre os cards */
   padding: 24px;
-  background-color: #f0f2f5; /* Um fundo suave para a área de conteúdo */
+  /* background-color: #f0f2f5; Um fundo suave para a área de conteúdo */
   border-radius: 8px;
 }
 

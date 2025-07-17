@@ -60,7 +60,7 @@ const dadosDoFormulario: FormularioData = {
                 <ul className={styles.historicoLista}>
                     {filledForms.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()) // Ordena mais recentes primeiro
                         .map(form => (
-                            <Collapse title={`Data : ${formatDate(form.date)} Tipo : ${form.type} `}>
+                            <Collapse title={`📅 Data : ${formatDate(form.date)} Tipo : ${form.type} `} typeForm={form.type}>
                                 {/* <DetalhesFormulario/> */}
                                 <FormularioDetalhes dados={dadosDoFormulario}/>
                             </Collapse>
