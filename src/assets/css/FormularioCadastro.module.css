@@ -79,112 +79,144 @@
     width: 100%; /* Garante que o input ocupe toda a largura do seu container div */
 }
 
-/* Ajuste no grid de endereço para melhor responsividade, se necessário */
-@media (max-width: 992px) {
-    .endereco {
-        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
-    }
-}
 
-@media (max-width: 768px) {
-    .informacoesPaciente,
-    .endereco {
-        grid-template-columns: 1fr; /* 1 coluna em telas menores */
+@media (max-width: 360px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 100vh;
+        background-color: #f3f3f3;
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
+    
+    .mainstyle {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0.1em 0.5em;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    
+    /* Container principal do formulário */
+    .containerCadastro {
+        max-width: 500px;
+        width: 100%;
+        background-color: white;
+        padding: 24px;
+        border-radius: 0.5rem;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Estilos para Navegação das Abas */
+    .tabNavigation {
+        display: flex;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #dee2e6;
+    }
+    
     .tabButton {
-        font-size: 0.9rem;
-        padding: 8px 12px;
+        padding: 10px 15px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        font-size: 0.95rem; /* ALTERADO: Levemente menor */
+        font-weight: 500;
+        color: #495057;
+        border-bottom: 2px solid transparent;
+        margin-bottom: -2px;
+        transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
     }
-}
-
-/* CadastroPofissional, tenho que organizar isso aqui */
-
-.mainstyle{
-    /* height: 120vh; */
-    background-color: rgb(243, 243, 243);
-    padding: 1.5em;
-    width: 100%;
-    font-weight: 500;
-    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
-    color: rgb(102, 102, 102);
     
-}
-
-.informacoesPaciente, .endereco{
-    font-size: 13px;
-    gap: 1rem;
-}
-
-.informacoesPaciente{
-    display:  grid;
-    grid-template-columns:  repeat(2,1fr);
+    .tabButton:hover {
+        color: #007bff;
+    }
     
+    .tabButton.active {
+        color: #007bff;
+        border-bottom-color: #007bff;
+        font-weight: 600;
+    }
     
-}
-.endereco{
-    display: grid;
-    /* flex-direction: column; */
-    grid-template-columns:  repeat(4,1fr);
-}
-
-.areaCadastroPaciente, 
-.areaEndereco{
-    background-color: rgb(255, 255, 255);
-    border: 0.5px solid rgb(199, 199, 199);
-    border-radius: 0.5rem;
-    padding: 1em;
-    font-size: 11px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    padding: 24px;
-    /* height: 100%; */
+    .tabContent {
+        padding-top: 0px;
+    }
     
-}
-
-.areaCadastroPaciente{
-    height: 350px;
+    /* Estilos dos campos de formulário */
+    .formSection {
+        margin-bottom: 30px;
+    }
     
-}
-
-.areaEndereco{
-    height: 300px;
-    margin-top: 50px;
-}
-
-.labelCadastroPaciente {
-    margin-bottom: 0.3em; /* Espaço entre o label e o input */
-
-}
-
-.inputCadastroPaciente {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 100%;
-}
-
-.areaHistorico{
-    min-height: 70vh;
-}
-
-@media (max-width: 300px) {
-
-    /*
-     * Altera os grids de "Dados Paciente" e "Endereço" para terem apenas UMA coluna.
-     * Isso força cada campo a ocupar uma linha, empilhando-os verticalmente.
-    */
-    .informacoesPaciente,
+    /* ALTERADO: Títulos "Dados Paciente" e "Endereço" menores e à esquerda */
+    h3 { 
+        font-size: 1.1rem; /* Tamanho da fonte reduzido */
+        color: #333;
+        margin-bottom: 15px;
+        text-align: left; /* Garante o alinhamento à esquerda */
+    }
+    
+    .formGrid {
+        display: grid;
+        gap: 1rem;
+    }
+    
+    .informacoesPaciente {
+        grid-template-columns: 1fr 1fr;
+    }
+    
     .endereco {
-        grid-template-columns: 1fr; /* A regra mais importante! */
+        grid-template-columns: 1fr 1fr;
     }
-
-    /* Opcional, mas recomendado para mobile: remover altura fixa */
-    .areaCadastroPaciente, 
-    .areaEndereco {
-        height: auto; /* Permite que o container cresça conforme o conteúdo */
+    
+    .form-group {
+        display: flex;
+        flex-direction: column;
     }
-
-    /* Opcional: ajustar o espaço entre as áreas em telas menores */
-    .areaEndereco {
-        margin-top: 24px;
+    
+    .full-width {
+        grid-column: 1 / -1;
+    }
+    
+    .labelCadastroPaciente {
+        margin-bottom: 0.4em;
+        font-size: 0.8rem; /* Tamanho da fonte reduzido */
+        font-weight: 500;
+        color: #666;
+    }
+    
+    .inputCadastroPaciente {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 0.8rem; /* ALTERADO: Levemente menor para acompanhar o label */
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Ações do Formulário */
+    .formActionsCadastro {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .btnSubmitCadastro {
+        padding: 12px 25px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        width: 100%;
+    }
+    
+    .btnSubmitCadastro:hover {
+        background-color: #218838;
     }
 }
