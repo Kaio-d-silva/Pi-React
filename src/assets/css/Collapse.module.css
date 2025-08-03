@@ -1,0 +1,71 @@
+.collapse {
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  margin: 10px 0;
+  overflow: hidden;
+  width: 100%;
+  /* max-width: 500px; */
+}
+
+.collapseTitle {
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  color: #030303;
+}
+
+.collapseDialiseTitle{
+  color:#388E3C ;
+  background-color: #E8F5E9;
+}
+
+.collapseGlicemiaTitle{
+  color: #1976D2;
+  background-color: #E3F2FD;
+}
+
+.collapseBothFormsTitle{
+  color: #7B1FA2;
+  background-color: #F3E5F5;
+}
+.collapseDialiseContent{
+  background-color: #c5f3c9;
+}
+
+.collapseGlicemiaContent{
+  background-color: #c4e5fc;
+}
+
+.collapseBothFormsContent{
+  background-color: #F3E5F5;
+}
+
+
+.collapseOpenTitle{
+  /* background-color: #f3f3f3; */
+  border: 1px solid #ddd;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  
+}  
+
+.collapseClosedTitle{
+  border: 1px solid #ddd;
+  /* background-color: #fff; */
+}
+
+.collapseContent {
+  /* background-color: #f3f3f3; */
+  border: 1px solid #ddd ;
+  border-top: none;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 16px;
+}
+

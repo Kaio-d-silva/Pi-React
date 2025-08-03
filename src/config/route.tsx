@@ -1,4 +1,3 @@
-import React from "react";
 import {
   createRoutesFromElements,
   createBrowserRouter,
@@ -8,14 +7,9 @@ import Root from "../components/root";
 import Login from "../views/Login";
 import CadastroPaciente from "../views/CadastroPaciente";
 import CadastroProfissional from "../views/CadastroProfissional";
-// import MenuFuncionarios from "../components/MenuFuncionarios"
 import Formulario from "../views/ControleDialise";
 import ControleGlicemiaForm from "../views/ControleGlicemia";
 import ContainerFormularios from "../components/ContainerFormularios";
-import DetalhesFormulario from "../components/DetalhesFormulario";
-// import path from "path";
-// import { emitKeypressEvents } from "readline";
-
 
 const routes = [
   {
@@ -26,11 +20,11 @@ const routes = [
     path: "cadastroProfissional",
     element: <CadastroProfissional/>
   },
-  {
-    path: "/dados",
-    element: < DetalhesFormulario/>
+  // {
+  //   path: "/dados",
+  //   element: < DetalhesFormulario/>
 
-  }
+  // }
   // {
   //   path: "formulario",
   //   element: <Formulario/>

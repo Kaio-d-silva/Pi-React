@@ -26,3 +26,5 @@ yarn-error.log*
 
 /src/pages/teste.tsx
 /src/temp/login_teste
+
+temp
