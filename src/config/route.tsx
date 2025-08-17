@@ -1,49 +1,55 @@
-import {
-  createRoutesFromElements,
-  createBrowserRouter,
-  Route,
-} from "react-router-dom";
-import Root from "../components/root";
+import {Navigate} from "react-router-dom";
 import Login from "../views/Login";
 import CadastroPaciente from "../views/CadastroPaciente";
 import CadastroProfissional from "../views/CadastroProfissional";
 import Formulario from "../views/ControleDialise";
 import ControleGlicemiaForm from "../views/ControleGlicemia";
 import ContainerFormularios from "../components/ContainerFormularios";
+import RestrictedLayout from "../layout/RestrictedLayout";
 
-const routes = [
+
+export interface RouteConfig {
+  path: string;
+  element: React.ReactElement;
+  children?: RouteConfig[];
+}
+
+const routes: RouteConfig[] = [
   {
-    path: "cadastroPaciente",
-    element: <CadastroPaciente/>
+    path: "/login",
+    element: <Login />
   },
   {
-    path: "cadastroProfissional",
-    element: <CadastroProfissional/>
-  },
-  // {
-  //   path: "/dados",
-  //   element: < DetalhesFormulario/>
+    path: "/",
+    element: <RestrictedLayout />,
+    children: [
+      {
+        path: "cadastroPaciente",
+        element: <CadastroPaciente />
+      },
+      {
+        path: "cadastroProfissional",
+        element: <CadastroProfissional />
+      },
 
-  // }
-  // {
-  //   path: "formulario",
-  //   element: <Formulario/>
-  // }
+    ]
+  },
+  {
+    path: "/formularios",
+    element: <ContainerFormularios />
+  },
+  {
+    path: "/formulario",
+    element: <Formulario />
+  },
+  {
+    path: "/glicemia",
+    element: <ControleGlicemiaForm />
+  },
+  {
+    path: "*",
+    element: <Navigate to="/" replace />
+  }
 ]
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-      <Route path="/login" element={<Login />} />
-      <Route path="/formulario" element={<Formulario />} />
-      <Route path="/glicemia" element={<ControleGlicemiaForm />} />
-      <Route path="/formularios" element={<ContainerFormularios />} />
-      <Route path="/" element={<Root/>}>
-        {routes.map((route, index) => 
-          <Route path={route.path} element={route.element} />
-        )}
-    </Route>
-    </>
-  )
-);
-export default router;
+export default routes;

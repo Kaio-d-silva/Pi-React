@@ -1,0 +1,114 @@
+
+/* Aquivo ContantArea */
+.containerArea {
+    flex: 1;
+    padding: 1.5rem; /* p-6 equivale a 1.5rem */
+    overflow: auto;
+}
+
+/* Aquivo MainContent */
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Arquivo RestrictedLayout */
+.restrictedLayout {
+    display: flex;
+    height: 100vh;
+    background-color: #f3f4f6; /* bg-gray-100 equivale a #f3f4f6 */
+}
+
+/* Arquivo Sidebar */
+.sidebar{
+    background-color: #2563eb; /* bg-blue-600 equivale a #2563eb */
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebarOpen {
+    width: 16rem;
+}
+
+.sidebarClosed {
+    width: 4rem; /* w-16 equivale a 4rem */
+}
+
+.sidebarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem; /* p-4 equivale a 1rem */
+}
+
+.sidebarHeader {
+    font-size: 1.125rem;
+    font-weight: bold;
+     
+}
+
+.sidebarOpenText {
+    display: block;
+}
+
+.sidebarClosedText {
+    visibility: hidden;
+}
+
+.buttonSidebar {
+    color: white; /* Equivalente ao text-white */
+}
+
+.buttonSidebar:focus {
+  outline: none; /* Equivalente ao focus:outline-none */
+}
+
+.sidebarNav {
+    margin-top: 1rem;
+}
+
+.sidebarItem {
+    display: flex;               /* flex */
+    align-items: center;         /* items-center */
+    gap: 1rem;                   /* gap-4 → 16px */
+    padding: 1rem;               /* p-4 → 16px */
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; /* transition-colors */
+    text-decoration: none;
+    color: white;
+}
+
+.sidebarItemOpen {
+ background-color: #1D4ED8;
+
+}
+
+.sidebarItem:hover {
+    background-color: #3B82F6;
+}
+
+/* Arquivo TopBar */
+
+.topBar {
+    background-color: white; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
+              0 1px 2px rgba(0, 0, 0, 0.06); /* shadow */
+    padding: 1rem;             /* p-4 */
+    display: flex;             /* flex */
+    align-items: center;       /* items-center */
+    justify-content: space-between; /* justify-between */
+}
+
+.topBarHeader {
+  font-size: 1.25rem;   /* 20px */
+  line-height: 1.75rem; /* 28px */
+  font-weight: 700;     /* bold */
+}
+
+.topBarButton {
+color: #2563eb; /* text-blue-600 */
+outline: none;  /* focus:outline-none */
+@media (min-width: 768px) {
+    display: none; /* md:hidden */
+}
+}
