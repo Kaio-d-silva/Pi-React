@@ -1,11 +1,11 @@
 import {Navigate} from "react-router-dom";
 import Login from "../views/Login";
-import CadastroPaciente from "../views/CadastroPaciente";
 import CadastroProfissional from "../views/CadastroProfissional";
 import Formulario from "../views/ControleDialise";
 import ControleGlicemiaForm from "../views/ControleGlicemia";
 import ContainerFormularios from "../components/ContainerFormularios";
 import RestrictedLayout from "../layout/RestrictedLayout";
+import PerfilPaciente from "../views/PerfilPaciente";
 
 
 export interface RouteConfig {
@@ -25,7 +25,7 @@ const routes: RouteConfig[] = [
     children: [
       {
         path: "cadastroPaciente",
-        element: <CadastroPaciente />
+        element: <PerfilPaciente />
       },
       {
         path: "cadastroProfissional",

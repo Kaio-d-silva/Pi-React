@@ -14,8 +14,8 @@ const RestrictedLayout: React.FC = () => {
 
   const menuItems = [
     { path: '/', label: 'Home'},
-    { path: '/cadastroPaciente', label: 'Listar Usuários',},
-    { path: '/users/new', label: 'Criar Usuário',},
+    { path: '/cadastroPaciente', label: 'Cadastro Paciente',},
+    { path: '/cadastroProfissional', label: 'Cadastro Profissional' },
 
     // { path: '/home', label: 'Home', icon: <FiHome /> },
     // { path: '/users', label: 'Listar Usuários', icon: <TbUsersGroup /> },
