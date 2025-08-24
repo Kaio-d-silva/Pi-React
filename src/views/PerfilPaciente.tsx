@@ -50,7 +50,7 @@ const PerfilPaciente: React.FC = () => {
                         ))}
                     </div>
                     {/* Conteúdo das Abas */}
-                    <div className={styles.tabContent}>
+                    <div>
                         {renderTabContent()}
                     </div>
                 </div>

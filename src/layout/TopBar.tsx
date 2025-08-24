@@ -9,7 +9,7 @@ interface TopBarProps {
 const TopBar: React.FC<TopBarProps> = ({ toggleSidebar }) => {
   return (
     <div className={styles.topBar}>
-      <h1 className="text-xl font-bold">Área Restrita</h1>
+      <h1 className="">Área Restrita</h1>
       <button
         onClick={toggleSidebar}
         className="text-blue-600 focus:outline-none md:hidden"

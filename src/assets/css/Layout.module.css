@@ -2,7 +2,6 @@
 /* Aquivo ContantArea */
 .containerArea {
     flex: 1;
-    padding: 1.5rem; /* p-6 equivale a 1.5rem */
     overflow: auto;
 }
 
@@ -22,13 +21,13 @@
 
 /* Arquivo Sidebar */
 .sidebar{
-    background-color: #2563eb; /* bg-blue-600 equivale a #2563eb */
+    background-color: #12398d; /* bg-blue-600 equivale a #2563eb */
     color: white;
     transition: all 0.3s ease-in-out;
 }
 
 .sidebarOpen {
-    width: 16rem;
+    width: 15.5rem;
 }
 
 .sidebarClosed {
@@ -58,6 +57,10 @@
 
 .buttonSidebar {
     color: white; /* Equivalente ao text-white */
+    width: 2.5rem; /* Equivalente ao w-10 */
+    height: 2.5rem; /* Equivalente ao h-10 */
+    border-radius: 0.5rem; /* Equivalente ao rounded */;
+    background-color: #3B82F6;
 }
 
 .buttonSidebar:focus {
@@ -90,14 +93,21 @@
 /* Arquivo TopBar */
 
 .topBar {
-    background-color: white; 
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
-              0 1px 2px rgba(0, 0, 0, 0.06); /* shadow */
-    padding: 1rem;             /* p-4 */
+    background-color: #f3f4f6; 
+    padding: 20px;
     display: flex;             /* flex */
     align-items: center;       /* items-center */
     justify-content: space-between; /* justify-between */
+    border: none;
 }
+
+.topBar h1 {
+    font-size: 28px; 
+    font-weight: 600; 
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
 
 .topBarHeader {
   font-size: 1.25rem;   /* 20px */

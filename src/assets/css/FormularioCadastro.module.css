@@ -1,14 +1,24 @@
+:root {
+            --fundo-principal: #F8F9FA;      /* Cinza-claro */
+            --fundo-secundario: #FFFFFF;     /* Branco (Cards e Menu) */
+            --texto-principal: #212529;      /* Quase preto */
+            --texto-secundario: #6C757D;     /* Cinza médio (Labels) */
+            --cor-destaque: #0D6EFD;         /* Azul Padrão */
+            --menu-ativo-bg: #E9ECEF;       /* Fundo do item de menu ativo */
+            --borda-input: #CED4DA;
+            --sombra-foco: rgba(13, 110, 253, 0.25);
+        }
+
+
 
 /* Ajuste para o containerCadastro se adaptar ao conteúdo das abas */
 .containerCadastro {
-    background-color: rgb(249, 249, 249);
-    padding: 40px;
     border-radius: 0.5rem;;
-    height: 80%; /* Remova ou ajuste a altura fixa para permitir que as abas expandam */
-    min-height: 70vh; /* Ou uma altura mínima que faça sentido, ver mais tarde */
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+    border: none;
+
+    /* box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px; */
 }
 
 /* Estilos para botão de salvar da aba de cadastro (exemplo) */
@@ -17,7 +27,7 @@
     text-align: right; /* Ou center, conforme preferir */
 }
 
-.btnSubmitCadastro {
+.btnSubmitCadastro {    
     padding: 10px 20px;
     background-color: #28a745; /* Cor verde para salvar */
     color: white;
@@ -33,16 +43,52 @@
     background-color: #218838;
 }
 
-/* Pequenos ajustes nos inputs e labels (opcional, mas melhora consistência) */
-.inputCadastroPaciente, 
-.labelCadastroPaciente {
-    box-sizing: border-box; /* Para que padding e border não aumentem a largura total */
-    font-size: 16px; /* Tamanho da fonte dos inputs */
+.formGroup { 
+    display: flex; 
+    flex-direction: column; }
+
+.formGroup label { 
+    color: var(--texto-secundario);
+    margin-bottom: 8px; 
+    font-size: 14px; }
+
+
+
+.formGroup input, .formGroup select { 
+    background-color: var(--fundo-secundario); 
+    border: 1px solid var(--borda-input); 
+    border-radius: 8px; 
+    padding: 12px; 
+    color: var(--texto-principal); 
+    font-size: 16px; 
+    outline: none; 
+    transition: border-color 0.2s, box-shadow 0.2s; }
+
+.formGroup input:focus, .formGroup select:focus { 
+    border-color: var(--cor-destaque); 
+    box-shadow: 0 0 0 3px var(--sombra-foco); }
+
+.formGrid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px 25px;
 }
 
-.inputCadastroPaciente {
-    width: 100%; /* Garante que o input ocupe toda a largura do seu container div */
+.card { 
+    background-color: var(--fundo-secundario); 
+    padding: 30px; 
+    border-radius: 12px; 
+    margin-bottom: 30px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+    border: 1px solid #E9ECEF; }
+
+.cardHeader h2 { 
+    font-size: 20px; 
+    margin-bottom: 25px; 
+    font-weight: 600; 
+    color: var(--texto-principal);
 }
+
 
 /* Ajuste no grid de endereço para melhor responsividade, se necessário */
 @media (max-width: 992px) {
@@ -60,67 +106,4 @@
         font-size: 0.9rem;
         padding: 8px 12px;
     }
-}
-
-/* CadastroPofissional, tenho que organizar isso aqui */
-
-.mainstyle{
-    /* background-color: rgb(243, 243, 243); */
-    padding: 1em;
-    font-weight: 500;
-    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
-    color: rgb(102, 102, 102);
-    
-}
-
-.informacoesPaciente, .endereco{
-    font-size: 13px;
-    gap: 1rem;
-}
-
-.informacoesPaciente{
-    display:  grid;
-    grid-template-columns:  repeat(2,1fr);
-    
-    
-}
-.endereco{
-    display: grid;
-    /* flex-direction: column; */
-    grid-template-columns:  repeat(4,1fr);
-}
-
-.areaCadastroPaciente, 
-.areaEndereco{
-    background-color: #ffffff;
-    border: 0.5px solid rgb(199, 199, 199);
-    border-radius: 0.5rem;;
-    padding: 1em;
-    font-size: 11px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    padding: 24px;
-    /* height: 100%; */
-    
-}
-
-.areaCadastroPaciente{
-    height: 350px;
-    
-}
-
-.areaEndereco{
-    height: 300px;
-    margin-top: 50px;
-}
-
-.labelCadastroPaciente {
-    margin-bottom: 0.3em; /* Espaço entre o label e o input */
-
-}
-
-.inputCadastroPaciente {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    width: 100%;
 }

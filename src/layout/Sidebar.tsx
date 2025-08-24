@@ -44,6 +44,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             }
           >
             {/* <span className="text-xl">{item.icon}</span> */}
+            <span className="text-xl">°</span>
             <span className={`${isSidebarOpen ? styles.sidebarOpenText : styles.sidebarClosedText}`}>
               {item.label}
             </span>
