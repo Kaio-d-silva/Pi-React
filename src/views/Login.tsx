@@ -1,13 +1,63 @@
 import styles from "../assets/css/Login.module.css";
 import { useNavigate } from "react-router-dom";
+import api from "../http/api";
+import { useState } from "react";
+import Snackbar from "../components/SnackBar";
+
 
 
 const Login = () => {
 
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
+    const [snackbar, setSnackbar] = useState<SnackbarState>({
+        message: "",
+        type: "Sucess",
+        duration: 0
+    })
+
+
     const navigate = useNavigate();
-    const login = () =>{
-        navigate("/");
+    const login = async () => {
+        const duration = 1000
+
+        const response = await api.post('/login', {
+            senha: senha,
+            email: email
+        })
+
+        let statusRequicao = "Error"
+        let messageSnackBar = "Não foi possivel realizar login"
+
+        if (response.status === 200) {
+
+            const { accessToken, refreshToken, message } = response.data
+
+            statusRequicao = "Sucess"
+            messageSnackBar = message
+
+            localStorage.setItem('token', accessToken)
+            localStorage.setItem('refreshToken', refreshToken)
+        }
+
+        setSnackbar({
+            message: messageSnackBar,
+            type: statusRequicao,
+            duration,
+        });
+
+        if (response.status === 200) {
+            setTimeout(() => {
+                navigate("/");
+            }, duration)
+
+        }
+
+
+
     }
+
+
     return (
         <main className={styles.loginPage}>
             <div className={styles.loginContainer}>
@@ -17,18 +67,26 @@ const Login = () => {
                     <h1>LOGIN</h1>
                     <form id="form-login" action="#">
                         <div className={styles.inputGroup}>
-                            <input type="text" id="username" name="username" placeholder="Nome de usuário" required />
+                            <input onChange={(e) => (setEmail(e.target.value))} type="text" id="username" name="username" placeholder="Nome de usuário" required />
                         </div>
                         <div className={styles.inputGroup}>
-                            <input type="password" id="password" name="password" placeholder="Senha" required />
+                            <input onChange={(e) => (setSenha(e.target.value))} type="password" id="password" name="password" placeholder="Senha" required />
                         </div>
-                        <button 
-                        type="button"
-                        onClick={login}>ENTRAR</button>
+                        <button
+                            type="button"
+                            onClick={login}>ENTRAR</button>
                         <a href="/" className={styles.forgotLink}>Esqueceu usuário ou senha?</a>
                         <a href="/" className={styles.signupLink}>CADASTRAR-SE</a>
                     </form>
                 </div>
+                <Snackbar
+                    message={snackbar.message}
+                    type={snackbar.type}
+                    duration={snackbar.duration}
+                    onClose={() =>
+                        setSnackbar({ message: '', type: 'success', duration: 0 })
+                    }
+                />
             </div>
         </main>
     );
