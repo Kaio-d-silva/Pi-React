@@ -1,16 +1,21 @@
-import { useState, useEffect, JSX } from 'react';
-import styles from '../assets/css/Snackbar.module.css';
+import * as React from "react";
+import { useState, useEffect, JSX } from "react";
+import styles from "../assets/css/SnackBar.module.css";
 
-interface SnackbarProps {
-  message: string;
-  type?: 'Success' | 'Error' | 'Warning' | 'Info';
-  duration?: number;
-  onClose?: () => void;
+export interface SnackbarProps {
+  message: string; // Mensagem a ser exibida no Snackbar
+  type?: "success" | "error" | "warning" | "info"; // Tipo do Snackbar
+  duration?: number; // Duração em milissegundos
+  onClose?: () => void; // Função chamada ao fechar o Snackbar
 }
-
+export interface SnackbarState {
+  message: string;
+  type?: "success" | "error" | "warning" | "info"; // Torna o tipo opcional
+  duration: number;
+}
 function Snackbar({
   message,
-  type = 'Success',
+  type = "success",
   duration = 10000,
   onClose = undefined,
 }: SnackbarProps): JSX.Element | null {
@@ -19,7 +24,6 @@ function Snackbar({
   useEffect(() => {
     if (message) {
       setVisible(true);
-
       const timer = setTimeout(() => {
         setVisible(false);
         if (onClose) onClose();
@@ -32,13 +36,12 @@ function Snackbar({
 
   if (!visible) return null;
 
-const typeClass = styles[`snackbar${type}`];
-
-return (
-    <div className={`${styles.snackbar} ${typeClass}`}>
-        {message}
+  return (
+    <div
+      className={`${styles.snackbar} ${styles[type]} `}
+    >
+      {message}
     </div>
-);
+  );
 }
-
 export default Snackbar;

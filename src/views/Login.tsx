@@ -2,7 +2,7 @@ import styles from "../assets/css/Login.module.css";
 import { useNavigate } from "react-router-dom";
 import api from "../http/api";
 import { useState } from "react";
-import Snackbar from "../components/SnackBar";
+import Snackbar, { SnackbarState } from "../components/SnackBar";
 
 
 
@@ -12,12 +12,29 @@ const Login = () => {
     const [senha, setSenha] = useState('')
     const [snackbar, setSnackbar] = useState<SnackbarState>({
         message: "",
-        type: "Sucess",
+        type: "success",
         duration: 0
     })
 
 
     const navigate = useNavigate();
+
+    const validateData = () => {
+        let message = "Preencha todos os campos"
+        const duration = 1500
+        
+        if (email === '' || senha === '') {
+            setSnackbar({
+            message: message,
+            type: "error",
+            duration,
+        });
+            return false
+        }
+
+        login()
+    }
+
     const login = async () => {
         const duration = 1000
 
@@ -26,14 +43,14 @@ const Login = () => {
             email: email
         })
 
-        let statusRequicao = "Error"
+        let statusRequicao : SnackbarState["type"]= "error"
         let messageSnackBar = "Não foi possivel realizar login"
 
         if (response.status === 200) {
 
             const { accessToken, refreshToken, message } = response.data
 
-            statusRequicao = "Sucess"
+            statusRequicao = "success"
             messageSnackBar = message
 
             localStorage.setItem('token', accessToken)
@@ -74,12 +91,13 @@ const Login = () => {
                         </div>
                         <button
                             type="button"
-                            onClick={login}>ENTRAR</button>
+                            onClick={validateData}>ENTRAR</button>
                         <a href="/" className={styles.forgotLink}>Esqueceu usuário ou senha?</a>
                         <a href="/" className={styles.signupLink}>CADASTRAR-SE</a>
                     </form>
                 </div>
-                <Snackbar
+            </div>
+            <Snackbar
                     message={snackbar.message}
                     type={snackbar.type}
                     duration={snackbar.duration}
@@ -87,7 +105,6 @@ const Login = () => {
                         setSnackbar({ message: '', type: 'success', duration: 0 })
                     }
                 />
-            </div>
         </main>
     );
 }
